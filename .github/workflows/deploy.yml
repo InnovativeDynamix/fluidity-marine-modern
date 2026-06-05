@@ -20,7 +20,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
@@ -33,7 +32,5 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.DREAMHOST_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          # Trust the host
           ssh-keyscan ${{ secrets.DREAMHOST_HOST }} >> ~/.ssh/known_hosts
-          # Run the sync
           rsync -e "ssh -i ~/.ssh/id_ed25519" -avz --delete dist/ ${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }}:/home/${{ secrets.DREAMHOST_USER }}/fluiditymarine.com/
