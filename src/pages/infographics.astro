@@ -672,6 +672,21 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
+    <!-- ─── Simulator CTA ─── -->
+    <section class="ig-sim-cta animate-in delay-5">
+      <div class="ig-sim-cta-box">
+        <div class="ig-sim-cta-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <h3>See ABLTV In Action</h3>
+        <p>Launch the interactive ABLTV surface simulator — a real-time p5.js physics model of the 7-node thrust vectoring system. Control steering, throttle, and emergency braking. Desktop only.</p>
+        <a href="/tools/simulator.html" class="button button-primary">Launch Simulator →</a>
+      </div>
+    </section>
+
   </main>
 </Layout>
 
@@ -927,6 +942,47 @@ import Layout from '../layouts/Layout.astro';
     width: 1px;
     height: 36px;
     background: var(--border-light);
+  }
+
+  /* ─── Simulator CTA ─── */
+  .ig-sim-cta {
+    margin-top: 4rem;
+  }
+
+  .ig-sim-cta-box {
+    text-align: center;
+    padding: 4rem;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-2xl);
+  }
+
+  .ig-sim-cta-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--cyan);
+    margin-bottom: 1.5rem;
+  }
+
+  .ig-sim-cta-box h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0 0 1rem;
+  }
+
+  .ig-sim-cta-box p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 550px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
   }
 
   /* ─── Responsive ─── */
