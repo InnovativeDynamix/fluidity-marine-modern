@@ -2,51 +2,357 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Technology | Fluidity Marine">
-	<main>
-		<section id="tech-hero">
-			<h1>Active Boundary Layer <span class="electric-text">Thrust Vectoring</span></h1>
-			<p class="tagline">The culmination of digital fluid dynamic control.</p>
-		</section>
+<Layout title="ABLTV Technology | Fluidity Marine">
+  <main class="page">
+    <!-- Hero -->
+    <section class="tech-hero animate-in">
+      <h1 class="page-title">
+        Active Boundary Layer<br />
+        <span class="electric-text">Thrust Vectoring</span>
+      </h1>
+      <p class="page-subtitle">
+        The culmination of digital fluid dynamic control. ABLTV eliminates the mechanical rudder entirely — 
+        replacing it with a synchronized array of thrust nodes that modulate the hull's boundary layer at 100Hz.
+      </p>
+    </section>
 
-		<section id="grid">
-			<div class="card">
-				<h2>ABLTV Core</h2>
-				<p>Our proprietary 7-node transom array modulates the boundary layer of the hull, enabling precise yaw control without mechanical rudders.</p>
-			</div>
+    <!-- ABLTV Diagram -->
+    <section class="diagram-section animate-in delay-1">
+      <div class="diagram-container">
+        <div class="hull-profile">
+          <!-- SVG: Boat hull with thrust nodes -->
+          <svg viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="tech-diagram">
+            <!-- Hull shape -->
+            <path d="M80 180 C200 120, 350 100, 500 100 C620 100, 700 120, 750 160 L780 200 L80 200 Z" 
+                  fill="url(#hullGrad)" stroke="rgba(0,242,254,0.3)" stroke-width="1"/>
+            
+            <!-- Boundary layer dashed line -->
+            <path d="M60 210 C200 150, 350 130, 500 130 C620 130, 710 150, 770 190" 
+                  stroke="rgba(0,242,254,0.2)" stroke-width="1.5" stroke-dasharray="6,4" fill="none"/>
+            <text x="30" y="155" fill="rgba(148,163,184,0.5)" font-size="11" font-family="Inter">Boundary Layer</text>
 
-			<div class="card">
-				<h2>Differential Drag</h2>
-				<p>By modulating the thrust/drag ratio on individual nodes, we achieve better range and precision than traditional mechanical deflection.</p>
-			</div>
+            <!-- Waterline -->
+            <line x1="40" y1="195" x2="780" y2="195" stroke="rgba(0,242,254,0.08)" stroke-width="1"/>
 
-			<div class="card">
-				<h2>Software Defined</h2>
-				<p>The system is entirely software-controlled, allowing for millisecond response times and automated station-keeping.</p>
-			</div>
-		</section>
+            <!-- Thrust nodes at transom -->
+            <circle cx="730" cy="155" r="12" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+            <text x="726" y="159" fill="#00f2fe" font-size="10" font-weight="700" font-family="Inter">1</text>
+            <circle cx="745" cy="165" r="12" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+            <text x="741" y="169" fill="#00f2fe" font-size="10" font-weight="700" font-family="Inter">2</text>
+            <circle cx="755" cy="178" r="12" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+            <text x="751" y="182" fill="#00f2fe" font-size="10" font-weight="700" font-family="Inter">3</text>
+            <circle cx="760" cy="190" r="12" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+            <text x="756" y="194" fill="#00f2fe" font-size="10" font-weight="700" font-family="Inter">4</text>
+            <circle cx="755" cy="200" r="12" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+            <text x="751" y="204" fill="#00f2fe" font-size="10" font-weight="700" font-family="Inter">5</text>
 
-		<div class="simulator-link">
-			<h3>Want to see it in action?</h3>
-			<p>Explore our high-fidelity physics simulator (Desktop Only).</p>
-			<a href="/tools/simulator.html" class="button">Launch Simulator &rarr;</a>
-		</div>
-	</main>
+            <!-- Jet streams -->
+            <path d="M760 178 C790 160, 800 140, 810 130" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" opacity="0.5" fill="none"/>
+            <path d="M760 190 C795 180, 810 165, 820 155" stroke="#4facfe" stroke-width="2" stroke-linecap="round" opacity="0.4" fill="none"/>
+            <path d="M755 200 C790 195, 810 185, 825 175" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" opacity="0.3" fill="none"/>
+
+            <!-- Labels -->
+            <text x="120" y="150" fill="rgba(255,255,255,0.4)" font-size="12" font-family="Inter">Clean Hull Profile</text>
+            <text x="700" y="120" fill="#00f2fe" font-size="13" font-weight="700" font-family="Inter">7× Thrust Array</text>
+
+            <!-- Flow lines -->
+            <path d="M100 185 C200 180, 300 178, 400 180" stroke="rgba(255,255,255,0.06)" stroke-width="1" fill="none"/>
+            <path d="M100 190 C250 185, 400 183, 550 187" stroke="rgba(255,255,255,0.04)" stroke-width="1" fill="none"/>
+            <path d="M100 195 C300 192, 500 190, 700 195" stroke="rgba(255,255,255,0.03)" stroke-width="1" fill="none"/>
+
+            <defs>
+              <linearGradient id="hullGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="rgba(15,23,42,0.6)"/>
+                <stop offset="50%" stop-color="rgba(30,41,59,0.4)"/>
+                <stop offset="100%" stop-color="rgba(15,23,42,0.6)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="content-section animate-in delay-2">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Three principles that make ABLTV a paradigm shift in maritime propulsion.</p>
+
+      <div class="card-grid">
+        <div class="card principle-card">
+          <div class="principle-number">01</div>
+          <h3>Node Synchronization</h3>
+          <p>A synchronized array of 7 high-pressure thrust nodes is embedded at the transom line. Each node operates independently, controlled by a real-time digital loop running at 100Hz.</p>
+        </div>
+
+        <div class="card principle-card">
+          <div class="principle-number">02</div>
+          <h3>Differential Drag Modulation</h3>
+          <p>Steering is achieved not by turning a mechanical rudder, but by micro-adjusting thrust intensity on individual nodes. This selectively increases or decreases drag at specific boundary layer coordinates, inducing yaw without appendages.</p>
+        </div>
+
+        <div class="card principle-card">
+          <div class="principle-number">03</div>
+          <h3>Software-Defined Vectoring</h3>
+          <p>Yaw, pitch, and roll vectors are calculated and executed in software. No mechanical linkages, no moving parts below the waterline — just digital precision controlling fluid dynamics at the interface.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem We Solve -->
+    <hr class="divider" />
+    <section class="content-section animate-in delay-3">
+      <div class="comparison-grid">
+        <div class="comparison-card old-way">
+          <div class="comparison-label">The Appendage Era</div>
+          <h3>Traditional Propulsion</h3>
+          <ul>
+            <li>Mechanical rudders create parasitic drag</li>
+            <li>Up to <strong>12% energy loss</strong> from rudder surface area</li>
+            <li><strong>60%</strong> of small-vessel engine failures linked to mechanical linkage or propeller/rudder snagging</li>
+            <li>Complex steerable units below waterline</li>
+            <li>Centralized industrial manufacturing required</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card new-way">
+          <div class="comparison-label electric-text">The Modulator Era</div>
+          <h3>ABLTV Propulsion</h3>
+          <ul>
+            <li>Zero mechanical appendages below waterline</li>
+            <li>Boundary layer modulation eliminates drag surface</li>
+            <li>No moving parts below water = near-zero underwater maintenance</li>
+            <li>Modular, 3D-printable architecture</li>
+            <li>Regional manufacturing hubs enabled</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specs -->
+    <hr class="divider" />
+    <section class="content-section animate-in delay-4">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p class="section-subtitle">Engineering details of the ABLTV system.</p>
+
+      <div class="specs-grid">
+        <div class="spec-item">
+          <span class="spec-key">Control Loop</span>
+          <span class="spec-value">100Hz real-time</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-key">Thrust Nodes</span>
+          <span class="spec-value">7 independent</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-key">Hull Integration</span>
+          <span class="spec-value">Transom array</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-key">Steering Mechanism</span>
+          <span class="spec-value">Differential drag vectoring</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-key">Moving Parts (underwater)</span>
+          <span class="spec-value">Zero</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-key">Manufacturing</span>
+          <span class="spec-value">3D-printable modular</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-key">Propulsion Type</span>
+          <span class="spec-value">Electric jet array</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-key">IP Status</span>
+          <span class="spec-value">Patent pending</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulator CTA -->
+    <section class="cta-section animate-in delay-4" style="margin-top: 5rem;">
+      <div class="glass-box cta-box">
+        <div class="cta-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <h3>See It In Action</h3>
+        <p>Explore our high-fidelity physics simulator — a live interactive model of the ABLTV thrust vectoring system. Desktop only.</p>
+        <a href="/tools/simulator.html" class="button button-primary">Launch Simulator →</a>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
-	main { max-width: 1000px; margin: 0 auto; padding: 6rem 2rem; }
-	h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; }
-	.tagline { font-size: 1.25rem; color: #94a3b8; margin-bottom: 5rem; }
-	
-	#grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 6rem; }
-	.card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 24px; }
-	.card h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
-	.card p { color: #94a3b8; line-height: 1.6; }
+  /* ─── Tech Hero ─── */
+  .tech-hero { margin-bottom: 3rem; }
 
-	.simulator-link { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 4rem; border-radius: 32px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
-	.simulator-link h3 { font-size: 1.75rem; margin-bottom: 1rem; }
-	.simulator-link p { margin-bottom: 2rem; color: #94a3b8; }
-	
-	.button { display: inline-block; padding: 1rem 2rem; background: #00f2fe; color: #050a0f; border-radius: 12px; text-decoration: none; font-weight: 800; }
+  /* ─── Diagram ─── */
+  .diagram-section {
+    margin-bottom: 5rem;
+  }
+
+  .diagram-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .tech-diagram {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ─── Principle Cards ─── */
+  .principle-card { position: relative; padding-top: 3.5rem; }
+
+  .principle-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(0, 242, 254, 0.08);
+    line-height: 1;
+  }
+
+  /* ─── Comparison Grid ─── */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .comparison-card {
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+  }
+
+  .comparison-card.old-way {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .comparison-card.new-way {
+    background: rgba(0, 242, 254, 0.03);
+    border-color: rgba(0, 242, 254, 0.15);
+  }
+
+  .comparison-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+  }
+
+  .comparison-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 1.5rem;
+  }
+
+  .comparison-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .comparison-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .comparison-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+  }
+
+  .comparison-card.new-way li::before {
+    content: '✓';
+    color: var(--cyan);
+  }
+
+  .comparison-card strong {
+    color: var(--text);
+  }
+
+  /* ─── Specs Grid ─── */
+  .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .spec-key {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .spec-value {
+    font-size: 0.9rem;
+    color: var(--cyan);
+    font-weight: 700;
+  }
+
+  /* ─── CTA Box ─── */
+  .cta-box {
+    text-align: center;
+    padding: 4rem;
+  }
+
+  .cta-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--cyan);
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-box h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0 0 1rem;
+  }
+
+  .cta-box p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .comparison-grid { grid-template-columns: 1fr; }
+    .cta-box { padding: 2.5rem 1.5rem; }
+  }
 </style>

@@ -2,33 +2,356 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Press | Fluidity Marine">
-	<main class="max-w-4xl mx-auto px-6 py-20">
-		<h1 class="text-4xl font-extrabold mb-4">Media Kit</h1>
-		<p class="text-lg text-slate-400 mb-12">Foundational assets and narrative briefs for the Maritime Paradigm Shift.</p>
+<Layout title="Press & Media Kit | Fluidity Marine">
+  <main class="page">
+    <!-- Hero -->
+    <section class="press-hero animate-in">
+      <h1 class="page-title">Media Kit</h1>
+      <p class="page-subtitle">
+        Foundational assets and narrative briefs for the Maritime Paradigm Shift. 
+        Fluidity Marine is redefining marine propulsion through Active Boundary Layer Thrust Vectoring (ABLTV).
+      </p>
+    </section>
 
-		<section class="grid gap-16">
-			<div class="asset-group">
-				<h2 class="text-2xl font-bold mb-6 text-cyan-400">Brand Synthesis</h2>
-				<div class="bg-white/5 p-8 rounded-2xl border border-white/10">
-					<p class="mb-4"><strong>Slogan:</strong> Be Part of the Solution, Not the Pollution!</p>
-					<p class="mb-4"><strong>Key USP:</strong> Active Boundary Layer Thrust Vectoring (ABLTV). By removing the mechanical rudder, Fluidity Marine increases range and eliminates the primary mechanical failure point of oceanic vessels.</p>
-				</div>
-			</div>
+    <!-- Brand Synthesis -->
+    <section class="asset-group animate-in delay-1">
+      <h2 class="section-title">Brand Synthesis</h2>
 
-			<div class="asset-group">
-				<h2 class="text-2xl font-bold mb-6 text-cyan-400">Press Assets</h2>
-				<ul class="list-disc pl-6 text-slate-400 space-y-4">
-					<li><a href="/favicon.svg" class="hover:text-white underline">Vector Logo (SVG)</a></li>
-					<li>High-Res Imagery (Coming Soon)</li>
-					<li>Technical Whitepaper (Q3 2026)</li>
-				</ul>
-			</div>
-		</section>
+      <div class="card brand-brief">
+        <div class="brand-field">
+          <span class="brand-label">Slogan</span>
+          <span class="brand-value">Be Part of the Solution, Not the Pollution!</span>
+        </div>
+        <div class="brand-field">
+          <span class="brand-label">Tagline</span>
+          <span class="brand-value">The Operating System of the Water</span>
+        </div>
+        <div class="brand-field">
+          <span class="brand-label">Core USP</span>
+          <span class="brand-value">Active Boundary Layer Thrust Vectoring (ABLTV) — removing the mechanical rudder to eliminate parasitic drag and the primary mechanical failure point of oceanic vessels.</span>
+        </div>
+        <div class="brand-field">
+          <span class="brand-label">Entity</span>
+          <span class="brand-value">InnovativeDynamix / Fluidity Marine</span>
+        </div>
+        <div class="brand-field">
+          <span class="brand-label">Funding Stage</span>
+          <span class="brand-value">Seed Round (Open on Wefunder)</span>
+        </div>
+      </div>
+    </section>
 
-		<section class="mt-20 pt-10 border-t border-white/10">
-			<h2 class="text-xl font-bold mb-4">Media Contact</h2>
-			<p class="text-slate-400">Aaron Evans, CEO<br/>info@fluiditymarine.com</p>
-		</section>
-	</main>
+    <!-- Key Messages -->
+    <section class="asset-group animate-in delay-2">
+      <h2 class="section-title">Key Messages</h2>
+
+      <div class="messages-grid">
+        <div class="card message-card">
+          <div class="message-number">01</div>
+          <h3>The End of the Appendage Era</h3>
+          <p>For over a century, maritime propulsion has relied on mechanical rudders. ABLTV ends that era. Software-defined thrust vectoring replaces physical appendages with digital precision.</p>
+        </div>
+
+        <div class="card message-card">
+          <div class="message-number">02</div>
+          <h3>From Shipyards to Printers</h3>
+          <p>Our modular, 3D-printable architecture democratizes marine manufacturing. Regional hubs, not centralized shipyards. Local assembly, global deployment.</p>
+        </div>
+
+        <div class="card message-card">
+          <div class="message-number">03</div>
+          <h3>Digital by Default</h3>
+          <p>A 100Hz real-time control loop governs every aspect of thrust vectoring. The vessel is a digital system first, a marine vessel second. Over-the-air updates, automated station-keeping, and precision handling.</p>
+        </div>
+
+        <div class="card message-card">
+          <div class="message-number">04</div>
+          <h3>Zero Compromise Propulsion</h3>
+          <p>Electric, silent, emission-free — without sacrificing performance. The ABLTV system achieves precision and efficiency that mechanical systems cannot match.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press Assets -->
+    <section class="asset-group animate-in delay-2">
+      <h2 class="section-title">Press Assets</h2>
+
+      <div class="card assets-card">
+        <ul class="assets-list">
+          <li class="asset-item">
+            <div class="asset-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+            </div>
+            <div class="asset-info">
+              <strong>Vector Logo (SVG)</strong>
+              <span>Fluidity Marine brand mark</span>
+            </div>
+            <a href="/favicon.svg" class="asset-download" download>Download</a>
+          </li>
+          <li class="asset-item">
+            <div class="asset-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="asset-info">
+              <strong>Technical Whitepaper</strong>
+              <span>Engineering specifications and ABLTV performance data</span>
+            </div>
+            <span class="asset-coming-soon">Q3 2026</span>
+          </li>
+          <li class="asset-item">
+            <div class="asset-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <div class="asset-info">
+              <strong>High-Res Imagery</strong>
+              <span>Product renders, diagrams, and concept visuals</span>
+            </div>
+            <span class="asset-coming-soon">Coming Soon</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Narrative Brief -->
+    <section class="asset-group animate-in delay-3">
+      <h2 class="section-title">Narrative Brief</h2>
+
+      <div class="card narrative-card">
+        <h3>For Journalists & Analysts</h3>
+        <p class="narrative-text">
+          Fluidity Marine, a division of InnovativeDynamix, has developed the first 
+          rudderless marine propulsion system based on Active Boundary Layer Thrust Vectoring (ABLTV). 
+          Unlike traditional systems that rely on mechanical appendages to redirect water, ABLTV uses a 
+          synchronized array of 7 thrust nodes at the transom to modulate the hull's boundary layer, 
+          enabling precise yaw control without moving parts below the waterline.
+        </p>
+        <p class="narrative-text">
+          The system is entirely software-defined, operating at a 100Hz control loop for millisecond 
+          response times. This represents a fundamental departure from the mechanical paradigm that has 
+          governed marine propulsion for over a century.
+        </p>
+        <p class="narrative-text">
+          The company is currently raising its Seed round on Wefunder, open to accredited and 
+          non-accredited investors.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <hr class="divider" />
+    <section class="contact-section animate-in delay-3">
+      <h2 class="section-title">Media Contact</h2>
+      <div class="card contact-card">
+        <div class="contact-avatar">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-details">
+          <h3>Aaron Evans</h3>
+          <span class="contact-role">CEO, InnovativeDynamix / Fluidity Marine</span>
+          <span class="contact-email">info@fluiditymarine.com</span>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  /* ─── Brand Brief ─── */
+  .brand-brief {
+    padding: 2rem;
+  }
+
+  .brand-field {
+    display: flex;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .brand-field:last-child { border-bottom: none; }
+
+  .brand-label {
+    min-width: 120px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cyan);
+  }
+
+  .brand-value {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ─── Messages Grid ─── */
+  .messages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .message-card {
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+  }
+
+  .message-number {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(0, 242, 254, 0.06);
+    line-height: 1;
+  }
+
+  .message-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .message-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* ─── Assets ─── */
+  .assets-card {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .assets-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .asset-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .asset-item:last-child { border-bottom: none; }
+
+  .asset-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+    background: rgba(0, 242, 254, 0.08);
+    color: var(--cyan);
+  }
+
+  .asset-info {
+    flex: 1;
+  }
+
+  .asset-info strong {
+    display: block;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 0.15rem;
+  }
+
+  .asset-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .asset-download {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--cyan);
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+  }
+
+  .asset-download:hover {
+    background: rgba(0, 242, 254, 0.1);
+  }
+
+  .asset-coming-soon {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ─── Narrative ─── */
+  .narrative-card {
+    padding: 2.5rem;
+  }
+
+  .narrative-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .narrative-text {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .narrative-text:last-child { margin-bottom: 0; }
+
+  /* ─── Contact ─── */
+  .contact-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 500px;
+  }
+
+  .contact-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(79, 172, 254, 0.1);
+    color: var(--blue);
+  }
+
+  .contact-details h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .contact-role {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-email {
+    font-size: 0.9rem;
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .messages-grid { grid-template-columns: 1fr; }
+    .brand-field { flex-direction: column; gap: 0.3rem; }
+    .brand-label { min-width: auto; }
+    .asset-item { flex-wrap: wrap; }
+  }
+</style>

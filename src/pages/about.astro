@@ -2,33 +2,282 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About | InnovativeDynamix">
-	<main class="max-w-4xl mx-auto px-6 py-20">
-		<section class="mb-16">
-			<h1 class="text-5xl font-black mb-6 leading-tight">The <span class="electric-text">Engine</span> of Innovation</h1>
-			<p class="text-xl text-slate-400 font-medium">Fluidity Marine is the high-tech R&D laboratory within the InnovativeDynamix portfolio, dedicated to redefining the maritime paradigm.</p>
-		</section>
+<Layout title="About | InnovativeDynamix & Fluidity Marine">
+  <main class="page">
+    <!-- Hero -->
+    <section class="about-hero animate-in">
+      <h1 class="page-title">
+        The <span class="electric-text">Engine</span> of Innovation
+      </h1>
+      <p class="page-subtitle">
+        Fluidity Marine is the high-tech R&D laboratory within the InnovativeDynamix portfolio, 
+        dedicated to redefining the maritime paradigm through Active Boundary Layer Thrust Vectoring.
+      </p>
+    </section>
 
-		<div class="grid md:grid-cols-2 gap-12 mb-20">
-			<div class="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-xl">
-				<h2 class="text-2xl font-bold mb-4">Fluidity Marine</h2>
-				<p class="text-slate-400 mb-6">Our intellectual property core. This is where the **ABLTV** thrust vectoring system was born through rigorous fluid dynamic simulation and rapid prototyping.</p>
-				<a href="/technology" class="text-cyan-400 font-bold hover:underline">View IP Specs &rarr;</a>
-			</div>
-			
-			<div class="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-xl">
-				<h2 class="text-2xl font-bold mb-4">InnovativeDynamix</h2>
-				<p class="text-slate-400 mb-6">The venture vehicle. Managing the transition from laboratory break-throughs to scalable global oceanic infrastructure and aspirational lifestyle anchors.</p>
-				<a href="/investors" class="text-cyan-400 font-bold hover:underline">Venture Roadmap &rarr;</a>
-			</div>
-		</div>
+    <!-- Entity Cards -->
+    <section class="entity-grid animate-in delay-1">
+      <div class="card entity-card">
+        <div class="entity-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+            <line x1="8" y1="7" x2="14" y2="7"/><line x1="8" y1="11" x2="12" y2="11"/>
+          </svg>
+        </div>
+        <h3>Fluidity Marine</h3>
+        <p class="entity-desc">Our intellectual property core. This is where the ABLTV thrust vectoring system was born through rigorous fluid dynamic simulation and rapid prototyping. The propulsion system that ends the Appendage Era.</p>
+        <a href="/technology" class="entity-link">View IP Specs →</a>
+      </div>
 
-		<section class="border-t border-white/5 pt-16">
-			<h2 class="text-3xl font-black mb-8">Our Strategic Mission</h2>
-			<div class="prose prose-invert prose-lg text-slate-400">
-				<p>We are replacing the 'Appendage Era' of maritime propulsion. By removing mechanical rudders and traditional outboards, we aren't just making boats better—we're making them **digital**.</p>
-				<p>Our focus on modularity, 3D-printing, and fluid intelligence allows us to scale production across continents while maintaining the precision of a local laboratory.</p>
-			</div>
-		</section>
-	</main>
+      <div class="card entity-card">
+        <div class="entity-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </div>
+        <h3>InnovativeDynamix</h3>
+        <p class="entity-desc">The venture vehicle. Managing the transition from laboratory breakthroughs to scalable global oceanic infrastructure and aspirational lifestyle anchors. Our focus is on modularity, 3D-printing, and fluid intelligence.</p>
+        <a href="/investors" class="entity-link">Venture Roadmap →</a>
+      </div>
+    </section>
+
+    <!-- Strategic Mission -->
+    <hr class="divider" />
+    <section class="mission-section animate-in delay-2">
+      <h2 class="section-title">Our Strategic Mission</h2>
+      <p class="section-subtitle">Replacing the Appendage Era of maritime propulsion with a digital, modular paradigm.</p>
+
+      <div class="mission-grid">
+        <div class="card mission-card">
+          <div class="mission-number">01</div>
+          <h3>Eliminate Mechanical Drag</h3>
+          <p>By removing mechanical rudders and traditional outboards, we eliminate parasitic drag at the hydrodynamic interface. This isn't incremental improvement — it's a fundamentally different approach to vessel control.</p>
+        </div>
+
+        <div class="card mission-card">
+          <div class="mission-number">02</div>
+          <h3>Digitize the Hull</h3>
+          <p>Our vessels aren't just electric — they're digital. Software-defined thrust vectoring allows millisecond response times, automated station-keeping, and precision handling that mechanical systems cannot match.</p>
+        </div>
+
+        <div class="card mission-card">
+          <div class="mission-number">03</div>
+          <h3>Scale Through Modularity</h3>
+          <p>3D-printed, modular architecture allows us to scale production regionally rather than relying on centralized industrial shipyards. Local assembly hubs, global reach.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Floating Bar -->
+    <hr class="divider" />
+    <section class="anchor-section animate-in delay-3">
+      <div class="anchor-content">
+        <div class="anchor-badge">Aspirational Anchor</div>
+        <h2 class="section-title">The Floating Bar</h2>
+        <p class="anchor-description">
+          Our lifestyle brand anchor — a high-efficiency, low-maintenance vessel concept that showcases 
+          the full potential of ABLTV technology in a real-world, aspirational context. The Floating Bar 
+          represents the convergence of maritime engineering and premium experience design: silent, 
+          emission-free, and precisely maneuverable without a single mechanical rudder.
+        </p>
+        <div class="anchor-details">
+          <div class="anchor-stat">
+            <span class="anchor-stat-value">ABLTV</span>
+            <span class="anchor-stat-label">Propulsion Core</span>
+          </div>
+          <div class="anchor-stat">
+            <span class="anchor-stat-value">Zero Emission</span>
+            <span class="anchor-stat-label">Electric Operation</span>
+          </div>
+          <div class="anchor-stat">
+            <span class="anchor-stat-value">Rudderless</span>
+            <span class="anchor-stat-label">Precision Control</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team / Leadership -->
+    <hr class="divider" />
+    <section class="leadership-section animate-in delay-3">
+      <h2 class="section-title">Leadership</h2>
+      <p class="section-subtitle">The team driving the paradigm shift.</p>
+
+      <div class="card leadership-card">
+        <div class="leader-avatar">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="leader-info">
+          <h3>Aaron Evans</h3>
+          <span class="leader-role">CEO / Chief Scientist</span>
+          <p>Founder and driving force behind InnovativeDynamix and the ABLTV platform. Leading the transition from laboratory break-throughs to global maritime infrastructure.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  /* ─── Entity Grid ─── */
+  .entity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .entity-card { padding: 2.5rem; }
+
+  .entity-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(0, 242, 254, 0.08);
+    color: var(--cyan);
+    margin-bottom: 1.5rem;
+  }
+
+  .entity-card h3 { font-size: 1.5rem; }
+
+  .entity-desc {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  .entity-link {
+    color: var(--cyan);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .entity-link:hover { text-decoration: underline; }
+
+  /* ─── Mission Grid ─── */
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .mission-card { position: relative; padding-top: 3.5rem; }
+
+  .mission-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(0, 242, 254, 0.08);
+    line-height: 1;
+  }
+
+  .mission-card p { line-height: 1.7; }
+
+  /* ─── Anchor Section ─── */
+  .anchor-section {
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.04) 0%, rgba(79, 172, 254, 0.02) 50%, transparent 100%);
+    border: 1px solid rgba(0, 242, 254, 0.1);
+    border-radius: var(--radius-2xl);
+    padding: 4rem;
+  }
+
+  .anchor-badge {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cyan);
+    margin-bottom: 1.5rem;
+  }
+
+  .anchor-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+
+  .anchor-details {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .anchor-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .anchor-stat-value {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--cyan);
+  }
+
+  .anchor-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* ─── Leadership ─── */
+  .leadership-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .leader-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(79, 172, 254, 0.1);
+    color: var(--blue);
+  }
+
+  .leader-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .leader-role {
+    font-size: 0.8rem;
+    color: var(--cyan);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .leader-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .entity-grid { grid-template-columns: 1fr; }
+    .anchor-section { padding: 2rem; }
+    .anchor-details { flex-wrap: wrap; gap: 1.5rem; }
+    .leadership-card { flex-direction: column; }
+  }
+</style>

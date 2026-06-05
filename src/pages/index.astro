@@ -2,61 +2,330 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Home | Fluidity Marine">
-	<main>
-		<section id="hero">
-			<h1>Clean <span class="electric-text">Electric</span> Propulsion for our Seas.</h1>
-			<p class="tagline">Replacing toxic outboard motors with modular, 3D-printed fluid intelligence.</p>
-			
-			<div class="cta-group">
-				<a href="https://wefunder.com/fluidity" class="button primary">Join the Mission</a>
-				<a href="/technology" class="button secondary">View Strategy</a>
-			</div>
-		</section>
+<Layout title="Fluidity Marine | Clean Electric Propulsion">
+  <!-- Animated Background -->
+  <div class="bg-container">
+    <div class="bg-gradient-overlay"></div>
+    <div class="particle-field" id="particles"></div>
+  </div>
 
-		<div id="campaign-alert" class="box">
-			<div class="pulse-icon"></div>
-			<h2>Crowdfunding Active</h2>
-			<p>Participate in the future of clean, electric marine propulsion.</p>
-			<a href="https://wefunder.com/fluidity" class="learn-more">Invest on Wefunder &rarr;</a>
-		</div>
-	</main>
+  <main class="page" style="border:none; min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding-top: 2rem; padding-bottom: 2rem;">
+    <div class="hero-content">
+      <div class="badge animate-in">
+        <span class="badge-dot"></span>
+        Seed Round Open on Wefunder
+      </div>
+
+      <h1 class="hero-title animate-in delay-1">
+        Clean <span class="electric-text">Electric</span> Propulsion<br />
+        <span class="hero-subline">for our Seas.</span>
+      </h1>
+
+      <p class="hero-tagline animate-in delay-2">
+        Replacing toxic outboard motors with modular, 3D-printed fluid intelligence.
+        The first rudderless marine propulsion system — powered by ABLTV.
+      </p>
+
+      <div class="hero-actions animate-in delay-3">
+        <a href="https://wefunder.com/fluidity" class="button button-primary button-lg" target="_blank" rel="noopener">
+          Invest on Wefunder
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/technology" class="button button-secondary button-lg">
+          Explore the Technology
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 17 16 12 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar animate-in delay-4">
+      <div class="stat-item">
+        <span class="stat-value">7</span>
+        <span class="stat-label">Thrust Nodes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value">100Hz</span>
+        <span class="stat-label">Control Loop</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value">Zero</span>
+        <span class="stat-label">Mechanical Drag</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value">Patent</span>
+        <span class="stat-label">Pending</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Campaign Alert -->
+  <div id="campaign-alert" class="animate-in delay-5">
+    <div class="pulse-icon"></div>
+    <div class="campaign-content">
+      <h2>Crowdfunding Active</h2>
+      <p>Our Seed Phase is live on Wefunder. Participate in the future of clean, electric marine propulsion.</p>
+      <a href="https://wefunder.com/fluidity" target="_blank" rel="noopener noreferrer" class="learn-more">Invest on Wefunder →</a>
+    </div>
+  </div>
 </Layout>
 
-<style>
-	main {
-		max-width: 1000px;
-		margin: 0 auto;
-		padding: 8rem 2rem;
-		min-height: 80vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	#hero { max-width: 700px; }
-	h1 { font-size: clamp(3rem, 10vw, 5rem); font-weight: 900; line-height: 1; margin: 0 0 2rem; color: #fff; }
-	.tagline { font-size: 1.25rem; color: #94a3b8; margin-bottom: 3rem; }
-	
-	.cta-group { display: flex; gap: 1rem; }
-	.button { padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 700; transition: all 0.2s; }
-	.button.primary { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #050a0f; box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2); }
-	.button.secondary { border: 1px solid rgba(255,255,255,0.1); color: #fff; }
-	.button:hover { transform: translateY(-2px); filter: brightness(1.1); }
+<script>
+  // Particle field background
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('particles');
+    if (!container) return;
 
-	#campaign-alert {
-		position: fixed;
-		bottom: 2rem;
-		right: 2rem;
-		width: 320px;
-		background: rgba(15, 23, 42, 0.9);
-		backdrop-filter: blur(12px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		padding: 2rem;
-		border-radius: 20px;
-	}
-	.pulse-icon { width: 10px; height: 10px; background: #00f2fe; border-radius: 50%; box-shadow: 0 0 10px #00f2fe; margin-bottom: 1rem; animation: pulse 2s infinite; }
-	@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-	h2 { font-size: 1.25rem; color: #fff; margin: 0 0 0.5rem; }
-	p { font-size: 0.9rem; color: #94a3b8; margin-bottom: 1.5rem; }
-	.learn-more { color: #00f2fe; text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%';
+    container.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+
+    let w, h, particles = [];
+    const COUNT = 80;
+
+    function resize() {
+      w = canvas.width = container.offsetWidth;
+      h = canvas.height = container.offsetHeight;
+    }
+
+    function init() {
+      resize();
+      particles = Array.from({ length: COUNT }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        r: Math.random() * 2 + 0.5,
+        alpha: Math.random() * 0.4 + 0.1
+      }));
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = w;
+        if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h;
+        if (p.y > h) p.y = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 242, 254, ${p.alpha})`;
+        ctx.fill();
+      });
+
+      // Draw connections
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0, 242, 254, ${0.08 * (1 - dist / 120)})`;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    init();
+    draw();
+    window.addEventListener('resize', resize);
+  });
+</script>
+
+<style>
+  /* ─── Animated Background ─── */
+  .bg-container {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .bg-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(79, 172, 254, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(0, 242, 254, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 40% at 20% 70%, rgba(124, 58, 237, 0.04) 0%, transparent 50%);
+  }
+
+  .particle-field {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* ─── Hero Content ─── */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cyan);
+    margin-bottom: 2.5rem;
+  }
+
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--cyan);
+    border-radius: 50%;
+    animation: pulse-glow 2s infinite;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 0 0 1.5rem;
+    color: #fff;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-subline {
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin: 0 0 2.5rem;
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .button-lg {
+    padding: 1.1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  /* ─── Stats Bar ─── */
+  .stats-bar {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    max-width: 700px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--cyan);
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 35px;
+    background: var(--border);
+  }
+
+  /* ─── Campaign Alert ─── */
+  #campaign-alert {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 360px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    z-index: 50;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .pulse-icon {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    background: var(--cyan);
+    border-radius: 50%;
+    margin-top: 4px;
+    box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.4);
+    animation: pulse-glow 2s infinite;
+  }
+
+  .campaign-content h2 {
+    font-size: 1rem;
+    margin: 0 0 0.4rem;
+    color: #fff;
+  }
+
+  .campaign-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0 0 0.8rem;
+    line-height: 1.5;
+  }
+
+  .learn-more {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--cyan);
+    text-decoration: none;
+  }
+
+  .learn-more:hover { text-decoration: underline; }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .stats-bar { flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .stat-divider { display: none; }
+    #campaign-alert { width: calc(100% - 2rem); right: 1rem; bottom: 1rem; }
+    .hero-actions { flex-direction: column; }
+    .button-lg { justify-content: center; }
+  }
 </style>

@@ -2,94 +2,399 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Investors | Fluidity Marine">
-	<main>
-		<section id="investor-hero">
-			<h1>Join the <span class="electric-text">Seed Phase</span></h1>
-			<p class="tagline">InnovativeDynamix is scaling the future of maritime technology. Participate in our equity crowdfunding round.</p>
-		</section>
+<Layout title="Investors | Fluidity Marine Seed Round">
+  <main class="page">
+    <!-- Hero -->
+    <section class="investor-hero animate-in">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span>Seed Round — Open on Wefunder</span>
+      </div>
+      <h1 class="page-title">
+        Join the <span class="electric-text">Seed Phase</span>
+      </h1>
+      <p class="page-subtitle">
+        InnovativeDynamix is scaling the future of maritime technology. 
+        Our ABLTV platform eliminates the mechanical rudder — an opportunity to participate 
+        in a fundamental paradigm shift in marine propulsion.
+      </p>
+    </section>
 
-		<section id="investment-summary">
-			<div class="stat-card">
-				<h3>Stage</h3>
-				<p class="value">Seed (Open)</p>
-			</div>
-			<div class="stat-card">
-				<h3>Platform</h3>
-				<p class="value">Wefunder</p>
-			</div>
-			<div class="stat-card">
-				<h3>Tech Moat</h3>
-				<p class="value">ABLTV Patent-Pending</p>
-			</div>
-		</section>
+    <!-- Quick Stats -->
+    <section class="stats-grid animate-in delay-1">
+      <div class="stat-card glass-box">
+        <span class="stat-card-label">Stage</span>
+        <span class="stat-card-value">Seed (Open)</span>
+      </div>
+      <div class="stat-card glass-box">
+        <span class="stat-card-label">Platform</span>
+        <span class="stat-card-value">Wefunder</span>
+      </div>
+      <div class="stat-card glass-box">
+        <span class="stat-card-label">Tech Moat</span>
+        <span class="stat-card-value">ABLTV Patent-Pending</span>
+      </div>
+      <div class="stat-card glass-box">
+        <span class="stat-card-label">Propulsion Era</span>
+        <span class="stat-card-value">Post-Appendage</span>
+      </div>
+    </section>
 
-		<section id="vision-brief">
-			<h2>Scaling the Maritime Operating System</h2>
-			<p>Fluidity Marine is more than a propulsion company. We are building the modular IP core (ABLTV) that will power a new generation of high-efficiency, low-maintenance vessels. From commercial transit to aspirational lifestyle anchors like "The Floating Bar," our technology is the common denominator.</p>
-		</section>
+    <!-- The Investment Thesis -->
+    <hr class="divider" />
+    <section class="thesis-section animate-in delay-2">
+      <h2 class="section-title">The Investment Thesis</h2>
+      <p class="section-subtitle">Why ABLTV represents a generational opportunity in marine technology.</p>
 
-		<section id="cta-portal">
-			<div class="portal-box">
-				<h2>Ready to Invest?</h2>
-				<p>Review our formal disclosure and join the mission on Wefunder.</p>
-				<a href="https://wefunder.com/fluidity" class="button primary highlight">Invest on Wefunder &rarr;</a>
-			</div>
-		</section>
-	</main>
+      <div class="thesis-grid">
+        <div class="card thesis-card">
+          <div class="thesis-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8"/><path d="M12 18V6"/></svg>
+          </div>
+          <h3>Massive TAM, Zero Competition</h3>
+          <p>The global marine propulsion market is valued at $12B+ annually. No competitor offers a rudderless, software-defined thrust vectoring system. ABLTV is in a category of one.</p>
+        </div>
+
+        <div class="card thesis-card">
+          <div class="thesis-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>3D-Printable Moat</h3>
+          <p>Our modular, 3D-printable architecture enables regional manufacturing without centralized shipyards. Lower CapEx to scale, faster deployment, and supply chain resilience.</p>
+        </div>
+
+        <div class="card thesis-card">
+          <div class="thesis-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>IP-Protected Infrastructure</h3>
+          <p>Patent-pending ABLTV technology forms a defensible moat. The system is entirely software-controlled, creating opportunities for recurring revenue through digital fleet management and over-the-air updates.</p>
+        </div>
+
+        <div class="card thesis-card">
+          <div class="thesis-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Regulatory Tailwinds</h3>
+          <p>Global emissions regulations are phasing out internal combustion marine engines. Electric propulsion is the only compliant path forward, and ABLTV is the most advanced electric propulsion architecture in development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Brief -->
+    <hr class="divider" />
+    <section class="vision-section animate-in delay-3">
+      <h2 class="section-title">Scaling the Maritime Operating System</h2>
+      <p class="vision-text">
+        Fluidity Marine is more than a propulsion company. We are building the modular IP core — 
+        ABLTV — that will power a new generation of high-efficiency, low-maintenance vessels. 
+        From commercial transit to aspirational lifestyle anchors like <strong>The Floating Bar</strong>, 
+        our technology is the common denominator.
+      </p>
+
+      <div class="vision-stats">
+        <div class="vision-stat">
+          <span class="vision-stat-value">$12B+</span>
+          <span class="vision-stat-label">Total Addressable Market</span>
+        </div>
+        <div class="vision-stat">
+          <span class="vision-stat-value">60%</span>
+          <span class="vision-stat-label">Fewer Failure Points</span>
+        </div>
+        <div class="vision-stat">
+          <span class="vision-stat-value">100%</span>
+          <span class="vision-stat-label">Electric Propulsion</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestones -->
+    <hr class="divider" />
+    <section class="milestones-section animate-in delay-3">
+      <h2 class="section-title">Roadmap & Milestones</h2>
+      <p class="section-subtitle">Our path from laboratory to global infrastructure.</p>
+
+      <div class="milestone-timeline">
+        <div class="milestone completed">
+          <div class="milestone-marker"></div>
+          <div class="milestone-content">
+            <span class="milestone-status">Completed</span>
+            <h3>ABLTV Proof of Concept</h3>
+            <p>Validated Active Boundary Layer Thrust Vectoring through fluid dynamic simulation and rapid prototyping.</p>
+          </div>
+        </div>
+
+        <div class="milestone active">
+          <div class="milestone-marker"></div>
+          <div class="milestone-content">
+            <span class="milestone-status">Active</span>
+            <h3>Seed Round & Web Presence</h3>
+            <p>Open equity crowdfunding on Wefunder. Building the digital and physical infrastructure for scaled production.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-marker"></div>
+          <div class="milestone-content">
+            <span class="milestone-status">Q3 2026</span>
+            <h3>Technical Whitepaper Release</h3>
+            <p>Comprehensive publication of ABLTV engineering specifications, simulation results, and performance data.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-marker"></div>
+          <div class="milestone-content">
+            <span class="milestone-status">Q4 2026</span>
+            <h3>First Prototype Vessel</h3>
+            <p>Full-scale ABLTV integration into a demonstrator vessel for sea trials and validation.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-marker"></div>
+          <div class="milestone-content">
+            <span class="milestone-status">2027</span>
+            <h3>Commercial Deployment</h3>
+            <p>First commercial ABLTV units deployed. Regional manufacturing hubs operational.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-portal animate-in delay-4">
+      <div class="glass-box portal-box">
+        <h2>Ready to Invest?</h2>
+        <p>Review our formal disclosure and join the mission on Wefunder. Participate in the future of marine propulsion.</p>
+        <div class="portal-actions">
+          <a href="https://wefunder.com/fluidity" class="button button-primary button-lg" target="_blank" rel="noopener">
+            Invest on Wefunder
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
-	main {
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 4rem 2rem;
-		color: #e2e8f0;
-	}
-	h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
-	.electric-text { background: linear-gradient(to right, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-	.tagline { font-size: 1.5rem; color: #94a3b8; margin-bottom: 4rem; }
-	
-	#investment-summary {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 1.5rem;
-		margin-bottom: 5rem;
-	}
-	.stat-card {
-		background: #111827;
-		padding: 2rem;
-		border-radius: 12px;
-		border: 1px solid #374151;
-	}
-	.stat-card h3 { font-size: 0.875rem; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; }
-	.stat-card .value { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 0.5rem; }
+  /* ─── Badge ─── */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cyan);
+    margin-bottom: 2rem;
+  }
 
-	#vision-brief { margin-bottom: 5rem; line-height: 1.8; font-size: 1.125rem; color: #94a3b8; }
-	#vision-brief h2 { color: #fff; margin-bottom: 1.5rem; }
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--cyan);
+    border-radius: 50%;
+    animation: pulse-glow 2s infinite;
+  }
 
-	#cta-portal {
-		background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-		padding: 4rem;
-		border-radius: 24px;
-		border: 1px solid rgba(255,255,255,0.1);
-		text-align: center;
-	}
-	.portal-box h2 { font-size: 2rem; margin-bottom: 1rem; }
-	.portal-box p { margin-bottom: 2.5rem; color: #94a3b8; }
-	
-	.button {
-		display: inline-block;
-		padding: 1.25rem 2.5rem;
-		border-radius: 12px;
-		text-decoration: none;
-		font-weight: 700;
-		transition: all 0.2s;
-	}
-	.button.primary.highlight {
-		background: #00f2fe;
-		color: #0f172a;
-		box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
-	}
-	.button:hover { transform: scale(1.02); filter: brightness(1.1); }
+  /* ─── Stats Grid ─── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card { padding: 1.5rem; text-align: center; }
+
+  .stat-card-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-card-value {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--cyan);
+  }
+
+  /* ─── Thesis Grid ─── */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .thesis-card { padding: 2rem; }
+
+  .thesis-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(0, 242, 254, 0.08);
+    color: var(--cyan);
+    margin-bottom: 1.2rem;
+  }
+
+  .thesis-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .thesis-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* ─── Vision ─── */
+  .vision-text {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 750px;
+    margin-bottom: 3rem;
+  }
+
+  .vision-text strong { color: #fff; }
+
+  .vision-stats {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .vision-stat { }
+
+  .vision-stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cyan);
+    margin-bottom: 0.3rem;
+  }
+
+  .vision-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* ─── Timeline ─── */
+  .milestone-timeline {
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  .milestone-timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .milestone {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  .milestone:last-child { margin-bottom: 0; }
+
+  .milestone-marker {
+    position: absolute;
+    left: -2.5rem;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--text-muted);
+    z-index: 2;
+  }
+
+  .milestone.completed .milestone-marker {
+    background: var(--cyan);
+    border-color: var(--cyan);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+  }
+
+  .milestone.active .milestone-marker {
+    background: var(--cyan);
+    border-color: var(--cyan);
+    animation: pulse-glow 2s infinite;
+  }
+
+  .milestone-status {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .milestone.completed .milestone-status { color: var(--cyan); }
+  .milestone.active .milestone-status { color: var(--cyan); }
+
+  .milestone-content h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0 0.4rem;
+  }
+
+  .milestone-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ─── CTA Portal ─── */
+  .cta-portal { margin-top: 5rem; }
+
+  .portal-box {
+    text-align: center;
+    padding: 4rem;
+  }
+
+  .portal-box h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 0 1rem;
+  }
+
+  .portal-box p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 550px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  .portal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .thesis-grid { grid-template-columns: 1fr; }
+    .vision-stats { flex-direction: column; gap: 1.5rem; }
+    .portal-box { padding: 2rem; }
+  }
 </style>
