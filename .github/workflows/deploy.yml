@@ -28,15 +28,12 @@ jobs:
       - name: Build Site
         run: npm run build
 
-      - name: List Build Output
-        run: ls -R dist
-
       - name: Deploy to Dreamhost
-        uses: easingthemes/ssh-deploy@main
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.DREAMHOST_SSH_KEY }}
-          ARGS: "-rlgoDzvc -i --delete"
-          REMOTE_HOST: ${{ secrets.DREAMHOST_HOST }}
-          REMOTE_USER: ${{ secrets.DREAMHOST_USER }}
-          TARGET: "/home/${{ secrets.DREAMHOST_USER }}/fluiditymarine.com/"
-          SOURCE: "dist/"
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DREAMHOST_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # Trust the host
+          ssh-keyscan ${{ secrets.DREAMHOST_HOST }} >> ~/.ssh/known_hosts
+          # Run the sync
+          rsync -e "ssh -i ~/.ssh/id_ed25519" -avz --delete dist/ ${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }}:/home/${{ secrets.DREAMHOST_USER }}/fluiditymarine.com/
