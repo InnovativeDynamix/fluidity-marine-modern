@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy to Dreamhost
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.DREAMHOST_SSH_KEY }}
           ARGS: "-rlgoDzvc -i --delete"
           REMOTE_HOST: ${{ secrets.DREAMHOST_HOST }}
