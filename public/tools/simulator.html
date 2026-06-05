@@ -2,37 +2,350 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Fluidity Marine: ABLTV Surface Simulator v1.6</title>
     <!-- Corrected CDN PATH -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <style>
-        body { margin: 0; padding: 0; background: #1a2a3a; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; }
-        #controls { position: absolute; top: 20px; left: 20px; background: rgba(22, 27, 34, 0.95); padding: 20px; border-radius: 12px; border: 1px solid #58a6ff; box-shadow: 0 4px 12px rgba(0,0,0,0.5); z-index: 10; }
-        h2 { margin: 0 0 10px 0; color: #58a6ff; font-size: 1.1rem; text-transform: uppercase; border-bottom: 2px solid #58a6ff; padding-bottom: 5px; }
-        .stat { font-family: 'Courier New', monospace; font-size: 0.85rem; margin: 8px 0; }
-        #canvas-container { border: 4px solid #30363d; border-radius: 12px; overflow: hidden; box-shadow: 0 0 40px rgba(0,0,0,0.8); }
-        .value { color: #58a6ff; font-weight: bold; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; padding: 0;
+            background: #0a1628;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', sans-serif;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: none;
+        }
+
+        /* ── Title Bar ── */
+        #title-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            background: rgba(10, 22, 40, 0.9);
+            border-bottom: 1px solid #0dd4b0;
+            z-index: 20;
+            font-size: 0.8rem;
+        }
+        #title-bar .title {
+            color: #0dd4b0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        #title-bar a {
+            color: #0dd4b0;
+            text-decoration: none;
+            font-size: 0.75rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        #title-bar a:hover { opacity: 1; }
+
+        /* ── Control Panel ── */
+        #controls {
+            position: absolute;
+            top: 56px;
+            left: 20px;
+            background: rgba(10, 22, 40, 0.95);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid #0dd4b0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            z-index: 10;
+            min-width: 200px;
+        }
+        #controls h2 {
+            margin: 0 0 8px 0;
+            color: #0dd4b0;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #0dd4b0;
+            padding-bottom: 5px;
+        }
+        .stat {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            margin: 6px 0;
+        }
+        #canvas-container {
+            border: 4px solid #0dd4b0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+        }
+        .value { color: #0dd4b0; font-weight: bold; }
         .alert { color: #ff6b6b; font-weight: bold; animation: blink 1s infinite; }
+        .key-hint {
+            margin-top: 12px;
+            font-size: 0.7rem;
+            color: #8b949e;
+            line-height: 1.6;
+        }
+        .mobile-hint {
+            display: none;
+            margin-top: 12px;
+            font-size: 0.7rem;
+            color: #0dd4b0;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
+        /* ── Touch Controls ── */
+        #touch-controls {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 15;
+            pointer-events: none;
+        }
+        #touch-controls .btn {
+            position: absolute;
+            pointer-events: auto;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(13, 212, 176, 0.12);
+            border: 2px solid rgba(13, 212, 176, 0.5);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0dd4b0;
+            font-size: 1.6rem;
+            font-weight: bold;
+            touch-action: none;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        #touch-controls .btn:active,
+        #touch-controls .btn.active {
+            background: rgba(13, 212, 176, 0.35);
+            border-color: #0dd4b0;
+        }
+        #touch-controls .btn-left {
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #touch-controls .btn-right {
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #touch-controls .btn-up {
+            right: 12px;
+            top: 18%;
+        }
+        #touch-controls .btn-down {
+            right: 12px;
+            top: auto;
+            bottom: 18%;
+        }
+        #touch-controls .btn-brake {
+            left: 50%;
+            bottom: 14px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 107, 107, 0.15);
+            border-color: rgba(255, 107, 107, 0.5);
+            color: #ff6b6b;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        #touch-controls .btn-brake:active,
+        #touch-controls .btn-brake.active {
+            background: rgba(255, 107, 107, 0.4);
+            border-color: #ff6b6b;
+        }
+
+        /* Arrow icon via content */
+        .btn-arrow-up::before    { content: "▲"; }
+        .btn-arrow-down::before  { content: "▼"; }
+        .btn-arrow-left::before  { content: "◀"; }
+        .btn-arrow-right::before { content: "▶"; }
+
+        /* ── Touch devices only ── */
+        @media (hover: none) and (pointer: coarse) {
+            #touch-controls { display: block; }
+            .key-hint { display: none; }
+            .mobile-hint { display: block; }
+            #controls {
+                left: 50%;
+                bottom: 100px;
+                top: auto;
+                transform: translateX(-50%);
+                min-width: auto;
+                width: calc(100% - 32px);
+                max-width: 320px;
+                padding: 10px 14px;
+                font-size: 0.75rem;
+                text-align: center;
+                border-radius: 16px;
+            }
+            #controls h2 { font-size: 0.85rem; }
+            .stat { font-size: 0.7rem; margin: 4px 0; display: inline-block; }
+            .stat + .stat { margin-left: 12px; }
+            #title-bar { height: 32px; font-size: 0.7rem; padding: 0 12px; }
+        }
+
+        @media (hover: none) and (pointer: coarse) and (max-height: 600px) {
+            #touch-controls .btn {
+                width: 56px;
+                height: 56px;
+                font-size: 1.2rem;
+            }
+            #touch-controls .btn-brake {
+                width: 64px;
+                height: 64px;
+                font-size: 0.6rem;
+            }
+            #controls {
+                bottom: 80px;
+                padding: 6px 10px;
+                max-width: 280px;
+            }
+            #controls h2 { display: none; }
+            .stat { font-size: 0.6rem; }
+        }
     </style>
 </head>
 <body>
+    <div id="title-bar">
+        <span class="title">ABLTV Surface Simulator v1.6</span>
+        <a href="https://fluiditymarine.com" target="_blank">Back to Site →</a>
+    </div>
+
     <div id="controls">
         <h2>ABLTV Transom Diagnostics</h2>
         <div class="stat">ENVIRONMENT: <span class="value">OPEN WATER</span></div>
         <div id="status-line" class="stat">STATUS: <span class="value">NOMINAL</span></div>
         <div class="stat">THRUST_LVL: <span id="thrust-val" class="value">60</span>%</div>
         <div class="stat">HEADING: <span id="yaw-val" class="value">0.0</span>°</div>
-        <div style="margin-top:15px; font-size: 0.75rem; color: #8b949e;">
-            [←/→] PRECISION STEER (Ultra-Slow)<br>
+        <div class="key-hint">
+            [←/→] PRECISION STEER<br>
             [↑/↓] RAPID THROTTLE<br>
             [SPACE] <b>EMERGENCY BRAKE</b>
         </div>
+        <div class="mobile-hint">⟐ TAP TO STEER ⟐</div>
     </div>
+
     <div id="canvas-container"></div>
 
+    <div id="touch-controls">
+        <button class="btn btn-arrow-left btn-left" data-key="37" aria-label="Steer Left"></button>
+        <button class="btn btn-arrow-right btn-right" data-key="39" aria-label="Steer Right"></button>
+        <button class="btn btn-arrow-up btn-up" data-key="38" aria-label="Increase Throttle"></button>
+        <button class="btn btn-arrow-down btn-down" data-key="40" aria-label="Decrease Throttle"></button>
+        <button class="btn btn-brake" data-key="32" aria-label="Emergency Brake">BRAKE</button>
+    </div>
+
     <script>
+        // ── Touch-to-Keyboard Bridge ──
+        (function() {
+            var activeKeys = {};
+            var btnEls = document.querySelectorAll('#touch-controls .btn');
+
+            function dispatchKey(keyCode, type) {
+                var evt = new KeyboardEvent(type, {
+                    keyCode: keyCode,
+                    which: keyCode,
+                    code: keyCode === 32 ? 'Space' :
+                          keyCode === 37 ? 'ArrowLeft' :
+                          keyCode === 38 ? 'ArrowUp' :
+                          keyCode === 39 ? 'ArrowRight' :
+                          keyCode === 40 ? 'ArrowDown' : '',
+                    bubbles: true,
+                    cancelable: true
+                });
+                document.dispatchEvent(evt);
+            }
+
+            function activate(btn, keyCode) {
+                if (activeKeys[keyCode]) return;
+                activeKeys[keyCode] = true;
+                btn.classList.add('active');
+                dispatchKey(keyCode, 'keydown');
+            }
+
+            function deactivate(btn, keyCode) {
+                if (!activeKeys[keyCode]) return;
+                delete activeKeys[keyCode];
+                btn.classList.remove('active');
+                dispatchKey(keyCode, 'keyup');
+            }
+
+            btnEls.forEach(function(btn) {
+                var keyCode = parseInt(btn.getAttribute('data-key'), 10);
+
+                // Touch events
+                btn.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    activate(btn, keyCode);
+                }, { passive: false });
+
+                btn.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    deactivate(btn, keyCode);
+                }, { passive: false });
+
+                btn.addEventListener('touchcancel', function(e) {
+                    e.preventDefault();
+                    deactivate(btn, keyCode);
+                }, { passive: false });
+
+                // Mouse events for desktop testing
+                btn.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    activate(btn, keyCode);
+                });
+
+                btn.addEventListener('mouseup', function(e) {
+                    e.preventDefault();
+                    deactivate(btn, keyCode);
+                });
+
+                btn.addEventListener('mouseleave', function(e) {
+                    deactivate(btn, keyCode);
+                });
+            });
+
+            // Deactivate all on window blur (safety)
+            window.addEventListener('blur', function() {
+                btnEls.forEach(function(btn) {
+                    var kc = parseInt(btn.getAttribute('data-key'), 10);
+                    if (activeKeys[kc]) {
+                        delete activeKeys[kc];
+                        btn.classList.remove('active');
+                        dispatchKey(kc, 'keyup');
+                    }
+                });
+            });
+        })();
+
+        // ── p5.js Simulation ──
         let particles = [];
         let yaw = 0;
         let yawVelocity = 0;
@@ -41,8 +354,18 @@
         let jetArray = [0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6];
         let isBraking = false;
 
+        function getCanvasSize() {
+            if (windowWidth < 768) {
+                let s = Math.min(windowWidth, windowHeight) * 0.95;
+                return { w: s, h: s };
+            } else {
+                return { w: windowWidth * 0.8, h: windowHeight * 0.8 };
+            }
+        }
+
         function setup() {
-            const canvas = createCanvas(windowWidth * 0.8, windowHeight * 0.8);
+            let size = getCanvasSize();
+            const canvas = createCanvas(size.w, size.h);
             canvas.parent('canvas-container');
             for (let i = 0; i < 100; i++) {
                 particles.push(new WaterParticle());
@@ -50,9 +373,9 @@
         }
 
         function draw() {
-            background(26, 42, 58); 
+            background(10, 22, 40);
             drawWaterSurface();
-            
+
             // 1. BRAKE LOGIC
             if (keyIsDown(32)) { // SPACE
                 isBraking = true;
@@ -60,7 +383,7 @@
                 if (statusLine) statusLine.innerHTML = 'STATUS: <span class="alert">EMERGENCY BRAKE</span>';
                 for(let i=0; i<7; i++) jetArray[i] = lerp(jetArray[i], 2.0, 0.2);
                 currentSpeed = lerp(currentSpeed, 0, 0.1);
-                yawVelocity *= 0.8; 
+                yawVelocity *= 0.8;
             } else {
                 isBraking = false;
                 let statusLine = document.getElementById('status-line');
@@ -99,7 +422,7 @@
             }
 
             yaw += yawVelocity;
-            
+
             let yVal = document.getElementById('yaw-val');
             let tVal = document.getElementById('thrust-val');
             if (yVal) yVal.innerText = (yaw * 57.29).toFixed(1);
@@ -113,7 +436,7 @@
             push();
             translate(width / 2, height / 2);
             rotate(yaw);
-            
+
             drawWake(currentSpeed, yawVelocity, isBraking);
             drawHull();
             drawTransomArray(jetArray, isBraking);
@@ -148,7 +471,7 @@
                 vertex(110, 260);
                 vertex(35, 80);
                 endShape(CLOSE);
-                
+
                 fill(255, 255, 255, 50);
                 for(let i=0; i<12; i++) {
                     ellipse(random(-30, 30) - (yv * 2000), 90 + random(0, 60 * speed), random(8, 20));
@@ -159,16 +482,16 @@
         function drawHull() {
             stroke(200, 200, 200);
             strokeWeight(1);
-            fill(40, 44, 52);
-            beginShape(); 
+            fill(30, 40, 60);
+            beginShape();
             vertex(-35, 80);
             vertex(35, 80);
             vertex(40, -40);
             vertex(0, -110);
             vertex(-40, -40);
             endShape(CLOSE);
-            
-            fill(60, 70, 80);
+
+            fill(50, 60, 80);
             rect(-22, -35, 44, 70, 5);
         }
 
@@ -178,16 +501,22 @@
             for(let i=0; i<7; i++) {
                 let t = jets[i];
                 let x = startX + (i * barWidth);
-                
+
                 if (braking) {
-                    fill(255, 107, 107, 220); 
+                    fill(255, 107, 107, 220);
                     rect(x - (barWidth/2) + 1, 75, barWidth - 1, 10);
                 } else {
                     noStroke();
-                    fill(88, 166, 255, 200);
+                    // Ocean teal gradient: brighter at top, deeper at base
+                    let teal = lerpColor(
+                        color(13, 212, 176, 200),
+                        color(13, 180, 150, 180),
+                        t
+                    );
+                    fill(teal);
                     rect(x - (barWidth/2) + 1, 81, barWidth - 1, 15 * t);
                 }
-                
+
                 stroke(255, 255, 255, 100);
                 strokeWeight(braking ? 2 : 1);
                 line(x, 81, x, 81 + (t * (braking ? 40 : 70)));
@@ -205,7 +534,7 @@
             }
             update(yv, spd) {
                 this.y += this.speed * (1 + spd);
-                this.x -= yv * 400; 
+                this.x -= yv * 400;
                 if (this.y > height) this.reset();
             }
             draw() {
@@ -216,7 +545,8 @@
         }
 
         function windowResized() {
-            resizeCanvas(windowWidth * 0.8, windowHeight * 0.8);
+            let size = getCanvasSize();
+            resizeCanvas(size.w, size.h);
         }
     </script>
 </body>
