@@ -20,10 +20,13 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Site
         run: npm run build
+
+      - name: List Build Output
+        run: ls -R dist
 
       - name: Deploy to Dreamhost
         uses: easingthemes/ssh-deploy@main
