@@ -117,6 +117,111 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </section>
+
+    <!-- Venture Portfolio -->
+    <hr class="divider" />
+    <section class="venture-section animate-in delay-4">
+      <h2 class="section-title">Venture Portfolio</h2>
+      <p class="section-subtitle">A unified ecosystem of marine innovation, lifestyle hospitality, and conservation.</p>
+
+      <div class="venture-grid">
+        <div class="card venture-card">
+          <h3>Fluidity Marine Inc.</h3>
+          <span class="venture-tag">US C-Corp</span>
+          <p>R&amp;D and commercialization of next-gen marine technologies. Focuses on environmentally friendly propulsion via the novel impeller system enabling rudderless, habitat-safe propulsion. Seeking grassroots &amp; impact funds via equity crowdfunding.</p>
+        </div>
+
+        <div class="card venture-card">
+          <h3>The Floating Bar S.A.</h3>
+          <span class="venture-tag">Panamanian S.A.</span>
+          <p>Aspirational lifestyle brand &amp; hospitality experience in Bocas del Toro, Panama. Operational with significant following. Serves as evangelist and community nexus.</p>
+        </div>
+
+        <div class="card venture-card">
+          <h3>ZumZ</h3>
+          <span class="venture-tag">Maritime Ride-Hailing</span>
+          <p>Maritime ride-hailing platform providing vital access to The Floating Bar and demonstrating clean propulsion. Technically ready with deployed apps and backend.</p>
+        </div>
+
+        <div class="card venture-card">
+          <h3>Sinking Man Org</h3>
+          <span class="venture-tag">Non-Profit</span>
+          <p>Event-driven, Burning Man-inspired community dedicated to marine conservation, social altruism, and sustainable lifestyle transformation. 501(c)(3) formation in progress.</p>
+        </div>
+
+        <div class="card venture-card">
+          <h3>Innovative Dynamix LLC</h3>
+          <span class="venture-tag">Tech Consulting</span>
+          <p>Advanced technology consultancy and revenue engine. Co-owned entity providing technical &amp; operational support to all ventures. Revenue-positive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products & Technology -->
+    <hr class="divider" />
+    <section class="products-section animate-in delay-4">
+      <h2 class="section-title">Products &amp; Technology</h2>
+      <p class="section-subtitle">Core technologies powering the next generation of sustainable marine propulsion.</p>
+
+      <div class="products-grid">
+        <div class="card product-card">
+          <h3>Snave Nozzles™ / Snave Impellers™ / Snave Rotors™</h3>
+          <p>Inspired by Gorlov/Lucid turbines and Flettner rotors. Our proprietary impeller geometry maximizes thrust efficiency while minimizing cavitation and noise.</p>
+        </div>
+
+        <div class="card product-card">
+          <h3>Electric Brushless Motors</h3>
+          <p>No toxic pollutants — clean, silent operation. Direct-drive brushless motors eliminate emissions, fuel leaks, and engine noise from the marine environment.</p>
+        </div>
+
+        <div class="card product-card">
+          <h3>Rudderless Steering</h3>
+          <p>Vector thrust control with zero external moving parts. Minimal habitat disturbance — no mechanical rudders, no protruding shafts, no appendage drag.</p>
+        </div>
+
+        <div class="card product-card">
+          <h3>3D Printed from Recycled Ocean Plastics</h3>
+          <p>Sustainable manufacturing with industrial-scale printers. Ocean-bound plastics are reclaimed, processed, and printed directly into durable marine-grade components.</p>
+        </div>
+
+        <div class="card product-card">
+          <h3>Integrated Renewables</h3>
+          <p>Solar/wind charging integration for continuous on-water operation. Self-sustaining vessels that harvest energy from the environment they navigate.</p>
+        </div>
+
+        <div class="card product-card">
+          <h3>Advanced Controls</h3>
+          <p>GPS, 360° stereoscopic video, and AI object recognition at the edge. Software-defined intelligence enables autonomous navigation and collision avoidance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prototype Concepts -->
+    <hr class="divider" />
+    <section class="prototypes-section animate-in delay-5">
+      <h2 class="section-title">Prototype Concepts</h2>
+      <p class="section-subtitle">Tangible vessels that bring the ABLTV vision to life — from concept to deployment.</p>
+
+      <div class="prototypes-grid">
+        <div class="card prototype-card">
+          <h3>GarBarge Platform</h3>
+          <span class="prototype-badge">Flagship Platform</span>
+          <p>Pontoon barge made from ocean reclaimed plastics. 3D printed honeycomb pontoons with omnidirectional autonomous impeller control pods. Solar sunshades provide continuous onboard charging.</p>
+        </div>
+
+        <div class="card prototype-card">
+          <h3>Autonomous Water Taxi</h3>
+          <span class="prototype-badge">Autonomous Transit</span>
+          <p>Built on GarBarge platform, controlled by GPS-based app with AI/ML edge-based object avoidance and docking. Solar sunshades protect passengers.</p>
+        </div>
+
+        <div class="card prototype-card">
+          <h3>ElectroPanga</h3>
+          <span class="prototype-badge">Coastal Utility</span>
+          <p>3D printed Panga hull with integrated intake flow channels and bolt-on impeller pods. Powered by solar collecting sunshades. Carbon neutral and cruelty free.</p>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
@@ -271,6 +376,100 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.6;
     margin-top: 0.8rem;
     margin-bottom: 0;
+  }
+
+  /* ─── Venture Portfolio ─── */
+  .venture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .venture-card { padding: 2rem; }
+
+  .venture-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.3rem;
+    color: #fff;
+  }
+
+  .venture-tag {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+  }
+
+  .venture-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ─── Products & Technology ─── */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .product-card { padding: 2rem; }
+
+  .product-card h3 {
+    font-size: 1.15rem;
+    margin: 0 0 1rem;
+    color: #fff;
+  }
+
+  .product-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ─── Prototype Concepts ─── */
+  .prototypes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .prototype-card { padding: 2rem; }
+
+  .prototype-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.3rem;
+    color: #fff;
+  }
+
+  .prototype-badge {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    background: rgba(79, 172, 254, 0.1);
+    border: 1px solid rgba(79, 172, 254, 0.15);
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--blue);
+    margin-bottom: 1rem;
+  }
+
+  .prototype-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
   }
 
   /* ─── Responsive ─── */
