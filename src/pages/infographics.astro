@@ -1,0 +1,978 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Technology Infographics | Fluidity Marine">
+  <main class="infographics-page">
+    
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- SECTION 1: HERO                                         -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <section class="ig-hero animate-in">
+      <h1 class="page-title">
+        Technology<br />
+        <span class="electric-text">Infographics</span>
+      </h1>
+      <p class="page-subtitle">
+        Visual guides to Active Boundary Layer Thrust Vectoring — see how ABLTV
+        eliminates mechanical rudders and redefines marine propulsion through
+        digital fluid dynamic control.
+      </p>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- SECTION 2: APPENDAGE ERA vs MODULATOR ERA               -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <section class="ig-section animate-in delay-1">
+      <h2 class="section-title">The Appendage Era vs The Modulator Era</h2>
+      <p class="section-subtitle">A side-by-side comparison of old and new marine propulsion paradigms.</p>
+
+      <div class="ig-era-container">
+        <svg viewBox="0 0 900 420" fill="none" xmlns="http://www.w3.org/2000/svg" class="ig-era-svg">
+          <defs>
+            <linearGradient id="eraBgLeft" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(255,60,60,0.06)"/>
+              <stop offset="100%" stop-color="rgba(255,60,60,0.02)"/>
+            </linearGradient>
+            <linearGradient id="eraBgRight" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.08)"/>
+              <stop offset="100%" stop-color="rgba(79,172,254,0.03)"/>
+            </linearGradient>
+            <linearGradient id="hullOld" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(148,163,184,0.3)"/>
+              <stop offset="50%" stop-color="rgba(148,163,184,0.15)"/>
+              <stop offset="100%" stop-color="rgba(148,163,184,0.3)"/>
+            </linearGradient>
+            <linearGradient id="hullNew" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.25)"/>
+              <stop offset="50%" stop-color="rgba(79,172,254,0.15)"/>
+              <stop offset="100%" stop-color="rgba(0,242,254,0.25)"/>
+            </linearGradient>
+            <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.08)"/>
+              <stop offset="100%" stop-color="rgba(0,242,254,0.02)"/>
+            </linearGradient>
+            <linearGradient id="jetGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#00f2fe"/>
+              <stop offset="100%" stop-color="#4facfe"/>
+            </linearGradient>
+            <filter id="glowOld">
+              <feGaussianBlur stdDeviation="1.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="glowNew">
+              <feGaussianBlur stdDeviation="2" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- LEFT SIDE: Appendage Era -->
+          <rect x="10" y="10" width="430" height="400" rx="16" fill="url(#eraBgLeft)" stroke="rgba(255,60,60,0.15)" stroke-width="1"/>
+          
+          <!-- Label -->
+          <rect x="40" y="30" width="160" height="28" rx="14" fill="rgba(255,60,60,0.12)"/>
+          <text x="120" y="49" text-anchor="middle" fill="#ff6060" font-size="12" font-weight="700" font-family="Inter" letter-spacing="0.06em">APPENDAGE ERA</text>
+
+          <!-- Traditional hull -->
+          <path d="M60 180 C140 130, 240 110, 320 110 C370 110, 400 125, 415 145 L425 170 L60 170 Z" 
+                fill="url(#hullOld)" stroke="rgba(148,163,184,0.3)" stroke-width="1"/>
+          
+          <!-- Waterline -->
+          <line x1="30" y1="170" x2="430" y2="170" stroke="rgba(148,163,184,0.08)" stroke-width="1"/>
+          
+          <!-- Rudder -->
+          <rect x="400" y="140" width="6" height="40" rx="2" fill="rgba(255,60,60,0.5)" stroke="#ff6060" stroke-width="1"/>
+          <rect x="406" y="148" width="12" height="24" rx="3" fill="rgba(255,60,60,0.4)" stroke="#ff6060" stroke-width="0.8"/>
+
+          <!-- Propeller -->
+          <circle cx="380" cy="140" r="14" fill="rgba(255,60,60,0.15)" stroke="#ff6060" stroke-width="1" stroke-dasharray="3,2"/>
+          <line x1="368" y1="140" x2="392" y2="140" stroke="#ff6060" stroke-width="1" opacity="0.5"/>
+          <line x1="380" y1="128" x2="380" y2="152" stroke="#ff6060" stroke-width="1" opacity="0.5"/>
+          <circle cx="380" cy="140" r="3" fill="#ff6060" opacity="0.6"/>
+          
+          <!-- Drag lines -->
+          <path d="M100 200 C140 230, 200 250, 300 240" stroke="rgba(255,60,60,0.2)" stroke-width="1.5" stroke-dasharray="4,3" fill="none"/>
+          <path d="M80 215 C130 250, 220 270, 320 255" stroke="rgba(255,60,60,0.15)" stroke-width="1" stroke-dasharray="4,3" fill="none"/>
+          <path d="M120 190 C160 205, 220 215, 280 210" stroke="rgba(255,60,60,0.1)" stroke-width="1" stroke-dasharray="4,3" fill="none"/>
+
+          <!-- Problems list -->
+          <rect x="50" y="240" width="370" height="36" rx="8" fill="rgba(255,60,60,0.06)" stroke="rgba(255,60,60,0.08)" stroke-width="1"/>
+          <text x="235" y="263" text-anchor="middle" fill="#ff6060" font-size="11" font-weight="600" font-family="Inter">⚠ Parasitic drag from rudder surface area</text>
+          
+          <rect x="50" y="284" width="370" height="36" rx="8" fill="rgba(255,60,60,0.06)" stroke="rgba(255,60,60,0.08)" stroke-width="1"/>
+          <text x="235" y="307" text-anchor="middle" fill="#ff6060" font-size="11" font-weight="600" font-family="Inter">⚠ Mechanical failure points below waterline</text>
+          
+          <rect x="50" y="328" width="370" height="36" rx="8" fill="rgba(255,60,60,0.06)" stroke="rgba(255,60,60,0.08)" stroke-width="1"/>
+          <text x="235" y="351" text-anchor="middle" fill="#ff6060" font-size="11" font-weight="600" font-family="Inter">⚠ Up to 12% energy loss to appendage drag</text>
+
+          <!-- Arrow divider -->
+          <line x1="440" y1="60" x2="460" y2="60" stroke="rgba(148,163,184,0.2)" stroke-width="1"/>
+          <line x1="440" y1="370" x2="460" y2="370" stroke="rgba(148,163,184,0.2)" stroke-width="1"/>
+          <line x1="450" y1="60" x2="450" y2="370" stroke="rgba(148,163,184,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+
+          <!-- RIGHT SIDE: Modulator Era -->
+          <rect x="460" y="10" width="430" height="400" rx="16" fill="url(#eraBgRight)" stroke="rgba(0,242,254,0.15)" stroke-width="1"/>
+
+          <!-- Label -->
+          <rect x="490" y="30" width="170" height="28" rx="14" fill="rgba(0,242,254,0.12)"/>
+          <text x="575" y="49" text-anchor="middle" fill="#00f2fe" font-size="12" font-weight="700" font-family="Inter" letter-spacing="0.06em">MODULATOR ERA</text>
+
+          <!-- New hull — clean, no rudder -->
+          <path d="M510 180 C590 130, 690 110, 770 110 C820 110, 850 125, 865 145 L875 170 L510 170 Z" 
+                fill="url(#hullNew)" stroke="rgba(0,242,254,0.25)" stroke-width="1"/>
+          
+          <!-- Waterline -->
+          <line x1="480" y1="170" x2="880" y2="170" stroke="rgba(0,242,254,0.08)" stroke-width="1"/>
+
+          <!-- Boundary layer indicator -->
+          <path d="M490 185 C580 160, 680 145, 770 145 C820 145, 855 155, 872 168" 
+                stroke="rgba(0,242,254,0.15)" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+          
+          <!-- Thrust nodes at transom -->
+          <circle cx="845" cy="125" r="10" fill="rgba(0,242,254,0.2)" stroke="#00f2fe" stroke-width="1.5" filter="url(#glowNew)"/>
+          <text x="845" y="129" text-anchor="middle" fill="#00f2fe" font-size="9" font-weight="700" font-family="Inter">1</text>
+          <circle cx="858" cy="138" r="10" fill="rgba(0,242,254,0.2)" stroke="#00f2fe" stroke-width="1.5" filter="url(#glowNew)"/>
+          <text x="858" y="142" text-anchor="middle" fill="#00f2fe" font-size="9" font-weight="700" font-family="Inter">2</text>
+          <circle cx="866" cy="153" r="10" fill="rgba(0,242,254,0.2)" stroke="#00f2fe" stroke-width="1.5" filter="url(#glowNew)"/>
+          <text x="866" y="157" text-anchor="middle" fill="#00f2fe" font-size="9" font-weight="700" font-family="Inter">3</text>
+          <circle cx="868" cy="168" r="10" fill="rgba(0,242,254,0.2)" stroke="#00f2fe" stroke-width="1.5" filter="url(#glowNew)"/>
+          <text x="868" y="172" text-anchor="middle" fill="#00f2fe" font-size="9" font-weight="700" font-family="Inter">4</text>
+
+          <!-- Jet streams -->
+          <path d="M875 140 C900 130, 920 120, 930 115" stroke="url(#jetGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.6" fill="none" filter="url(#glowNew)"/>
+          <path d="M875 153 C905 145, 925 138, 940 130" stroke="url(#jetGrad)" stroke-width="2" stroke-linecap="round" opacity="0.5" fill="none"/>
+          <path d="M875 168 C905 163, 925 158, 940 150" stroke="url(#jetGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.3" fill="none"/>
+
+          <!-- Clean flow lines -->
+          <path d="M520 195 C600 190, 700 188, 800 190" stroke="rgba(0,242,254,0.08)" stroke-width="1" fill="none"/>
+          <path d="M510 210 C630 205, 750 202, 830 208" stroke="rgba(0,242,254,0.05)" stroke-width="1" fill="none"/>
+
+          <!-- Advantages list -->
+          <rect x="500" y="240" width="370" height="36" rx="8" fill="rgba(0,242,254,0.06)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+          <text x="685" y="263" text-anchor="middle" fill="#00f2fe" font-size="11" font-weight="600" font-family="Inter">✓ Zero parasitic drag — no appendages</text>
+          
+          <rect x="500" y="284" width="370" height="36" rx="8" fill="rgba(0,242,254,0.06)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+          <text x="685" y="307" text-anchor="middle" fill="#00f2fe" font-size="11" font-weight="600" font-family="Inter">✓ No moving parts below the waterline</text>
+          
+          <rect x="500" y="328" width="370" height="36" rx="8" fill="rgba(0,242,254,0.06)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+          <text x="685" y="351" text-anchor="middle" fill="#00f2fe" font-size="11" font-weight="600" font-family="Inter">✓ Full digital control at 100Hz loop</text>
+
+        </svg>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- SECTION 3: HOW ABLTV WORKS (3-step flow)               -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <section class="ig-section animate-in delay-2">
+      <h2 class="section-title">How ABLTV Works</h2>
+      <p class="section-subtitle">Three sequential stages of boundary layer thrust vectoring in action.</p>
+
+      <div class="ig-flow-container">
+        <svg viewBox="0 0 1000 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="ig-flow-svg">
+          <defs>
+            <linearGradient id="stepBg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.04)"/>
+              <stop offset="100%" stop-color="rgba(79,172,254,0.02)"/>
+            </linearGradient>
+            <linearGradient id="flowArrow" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#00f2fe"/>
+              <stop offset="100%" stop-color="#4facfe"/>
+            </linearGradient>
+            <linearGradient id="hullFlowGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.2)"/>
+              <stop offset="50%" stop-color="rgba(79,172,254,0.1)"/>
+              <stop offset="100%" stop-color="rgba(0,242,254,0.2)"/>
+            </linearGradient>
+            <filter id="nodeGlow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="url(#flowArrow)"/>
+            </marker>
+          </defs>
+
+          <!-- STEP 1 -->
+          <rect x="10" y="10" width="300" height="320" rx="16" fill="url(#stepBg)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+          
+          <!-- Step number badge -->
+          <circle cx="50" cy="45" r="16" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+          <text x="50" y="50" text-anchor="middle" fill="#00f2fe" font-size="14" font-weight="800" font-family="Inter">1</text>
+          
+          <text x="80" y="50" fill="#fff" font-size="14" font-weight="700" font-family="Inter">Command Received</text>
+
+          <!-- Hull top view -->
+          <path d="M60 160 C100 120, 160 110, 200 110 C230 110, 260 120, 280 140 L290 160 L60 160 Z" 
+                fill="url(#hullFlowGrad)" stroke="rgba(0,242,254,0.2)" stroke-width="1"/>
+          
+          <!-- Controller icon -->
+          <rect x="100" y="60" width="120" height="40" rx="8" fill="rgba(0,242,254,0.08)" stroke="rgba(0,242,254,0.15)" stroke-width="1"/>
+          <text x="160" y="85" text-anchor="middle" fill="#00f2fe" font-size="11" font-weight="600" font-family="Inter">100Hz Controller</text>
+
+          <!-- Down arrow from controller -->
+          <line x1="160" y1="100" x2="160" y2="120" stroke="#00f2fe" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+          <!-- 7 nodes -->
+          <circle cx="72" cy="135" r="7" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <text x="72" y="138" text-anchor="middle" fill="#00f2fe" font-size="7" font-weight="700" font-family="Inter">1</text>
+          <circle cx="90" cy="128" r="7" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <text x="90" y="131" text-anchor="middle" fill="#00f2fe" font-size="7" font-weight="700" font-family="Inter">2</text>
+          <circle cx="108" cy="123" r="7" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <text x="108" y="126" text-anchor="middle" fill="#00f2fe" font-size="7" font-weight="700" font-family="Inter">3</text>
+          <circle cx="126" cy="120" r="7" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <text x="126" y="123" text-anchor="middle" fill="#00f2fe" font-size="7" font-weight="700" font-family="Inter">4</text>
+          <circle cx="144" cy="123" r="7" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <text x="144" y="126" text-anchor="middle" fill="#00f2fe" font-size="7" font-weight="700" font-family="Inter">5</text>
+          <circle cx="162" cy="128" r="7" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <text x="162" y="131" text-anchor="middle" fill="#00f2fe" font-size="7" font-weight="700" font-family="Inter">6</text>
+          <circle cx="180" cy="135" r="7" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <text x="180" y="138" text-anchor="middle" fill="#00f2fe" font-size="7" font-weight="700" font-family="Inter">7</text>
+
+          <!-- Description -->
+          <text x="160" y="200" text-anchor="middle" fill="rgba(148,163,184,0.7)" font-size="11" font-family="Inter">
+            <tspan x="160" dy="0">7 thrust nodes at the transom</tspan>
+            <tspan x="160" dy="18">receive independent commands</tspan>
+            <tspan x="160" dy="18">from the 100Hz control loop</tspan>
+          </text>
+
+          <!-- Arrow between steps -->
+          <line x1="320" y1="170" x2="345" y2="170" stroke="url(#flowArrow)" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.6"/>
+
+          <!-- STEP 2 -->
+          <rect x="350" y="10" width="300" height="320" rx="16" fill="url(#stepBg)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+          
+          <circle cx="390" cy="45" r="16" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+          <text x="390" y="50" text-anchor="middle" fill="#00f2fe" font-size="14" font-weight="800" font-family="Inter">2</text>
+          
+          <text x="420" y="50" fill="#fff" font-size="14" font-weight="700" font-family="Inter">Boundary Layer Warping</text>
+
+          <!-- Hull side profile -->
+          <path d="M390 200 C430 150, 490 130, 550 130 C580 130, 610 140, 630 160 L640 190 L390 190 Z" 
+                fill="url(#hullFlowGrad)" stroke="rgba(0,242,254,0.2)" stroke-width="1"/>
+
+          <!-- Thrust nodes at transom -->
+          <circle cx="620" cy="148" r="8" fill="rgba(0,242,254,0.25)" stroke="#00f2fe" stroke-width="1.5" filter="url(#nodeGlow)"/>
+          <text x="620" y="151" text-anchor="middle" fill="#00f2fe" font-size="8" font-weight="700" font-family="Inter">1</text>
+          <circle cx="630" cy="162" r="8" fill="rgba(0,242,254,0.25)" stroke="#00f2fe" stroke-width="1.5" filter="url(#nodeGlow)"/>
+          <text x="630" y="165" text-anchor="middle" fill="#00f2fe" font-size="8" font-weight="700" font-family="Inter">2</text>
+          <circle cx="636" cy="178" r="8" fill="rgba(0,242,254,0.25)" stroke="#00f2fe" stroke-width="1.5" filter="url(#nodeGlow)"/>
+          <text x="636" y="181" text-anchor="middle" fill="#00f2fe" font-size="8" font-weight="700" font-family="Inter">3</text>
+
+          <!-- Boundary layer warping visualization -->
+          <path d="M380 215 C450 200, 520 195, 580 200 C600 202, 620 208, 640 220" 
+                stroke="#00f2fe" stroke-width="2" stroke-dasharray="6,3" fill="none" opacity="0.7"/>
+          <path d="M380 230 C450 218, 520 215, 570 222 C600 226, 625 235, 645 250" 
+                stroke="#4facfe" stroke-width="1.5" stroke-dasharray="5,3" fill="none" opacity="0.5"/>
+          
+          <!-- Warp indicator arrows -->
+          <path d="M540 195 L540 185" stroke="#00f2fe" stroke-width="1" opacity="0.4" marker-end="url(#arrowhead)"/>
+          <path d="M570 198 L570 185" stroke="#00f2fe" stroke-width="1" opacity="0.4" marker-end="url(#arrowhead)"/>
+          <path d="M600 203 L600 190" stroke="#00f2fe" stroke-width="1" opacity="0.4" marker-end="url(#arrowhead)"/>
+
+          <text x="500" y="270" text-anchor="middle" fill="rgba(148,163,184,0.7)" font-size="11" font-family="Inter">
+            <tspan x="500" dy="0">Differential thrust modulation</tspan>
+            <tspan x="500" dy="18">selectively warps the boundary</tspan>
+            <tspan x="500" dy="18">layer along the hull surface</tspan>
+          </text>
+
+          <!-- Arrow between steps -->
+          <line x1="660" y1="170" x2="685" y2="170" stroke="url(#flowArrow)" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.6"/>
+
+          <!-- STEP 3 -->
+          <rect x="690" y="10" width="300" height="320" rx="16" fill="url(#stepBg)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+          
+          <circle cx="730" cy="45" r="16" fill="rgba(0,242,254,0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+          <text x="730" y="50" text-anchor="middle" fill="#00f2fe" font-size="14" font-weight="800" font-family="Inter">3</text>
+          
+          <text x="760" y="50" fill="#fff" font-size="14" font-weight="700" font-family="Inter">Yaw Without Rudder</text>
+
+          <!-- Hull top-down view with yaw turning -->
+          <path d="M740 180 C770 140, 820 120, 860 120 L900 120 L900 200 L740 200 Z" 
+                fill="url(#hullFlowGrad)" stroke="rgba(0,242,254,0.2)" stroke-width="1"/>
+
+          <!-- Turning path -->
+          <path d="M740 160 C780 155, 820 150, 860 150 C880 150, 900 152, 920 155" 
+                stroke="#00f2fe" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"
+                stroke-dasharray="4,4"/>
+          
+          <!-- Yaw indicator -->
+          <path d="M920 155 L940 145" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" opacity="0.8" marker-end="url(#arrowhead)"/>
+          
+          <!-- Thrust differential visualization -->
+          <rect x="810" y="130" width="40" height="8" rx="4" fill="#00f2fe" opacity="0.8" filter="url(#nodeGlow)"/>
+          <rect x="810" y="150" width="30" height="8" rx="4" fill="#4facfe" opacity="0.6"/>
+          <rect x="810" y="170" width="20" height="8" rx="4" fill="rgba(79,172,254,0.4)"/>
+          
+          <text x="810" y="125" fill="rgba(148,163,184,0.5)" font-size="9" font-family="Inter">THRUST DIFF</text>
+          
+          <!-- No rudder stamp -->
+          <rect x="750" y="210" width="170" height="24" rx="12" fill="rgba(0,242,254,0.08)" stroke="rgba(0,242,254,0.2)" stroke-width="1"/>
+          <text x="835" y="226" text-anchor="middle" fill="#00f2fe" font-size="11" font-weight="700" font-family="Inter">✕ No Mechanical Rudder</text>
+
+          <text x="840" y="270" text-anchor="middle" fill="rgba(148,163,184,0.7)" font-size="11" font-family="Inter">
+            <tspan x="840" dy="0">Yaw achieved purely through</tspan>
+            <tspan x="840" dy="18">differential thrust modulation —</tspan>
+            <tspan x="840" dy="18">zero moving parts underwater</tspan>
+          </text>
+
+        </svg>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- SECTION 4: TECHNICAL SPECIFICATIONS                     -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <section class="ig-section animate-in delay-3">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p class="section-subtitle">Engineering details of the ABLTV system at a glance.</p>
+
+      <div class="ig-specs-grid">
+        <!-- 100Hz Control Loop -->
+        <div class="ig-spec-card">
+          <div class="ig-spec-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="14" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <path d="M16 8 L16 16 L22 20" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="16" cy="16" r="3" fill="#00f2fe"/>
+            </svg>
+          </div>
+          <div class="ig-spec-body">
+            <span class="ig-spec-label">Control Loop</span>
+            <span class="ig-spec-value">100Hz real-time</span>
+            <span class="ig-spec-desc">Closed-loop digital feedback at 10ms intervals</span>
+          </div>
+        </div>
+
+        <!-- 7 Independent Thrust Nodes -->
+        <div class="ig-spec-card">
+          <div class="ig-spec-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="8" width="24" height="16" rx="4" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <circle cx="10" cy="16" r="2" fill="#00f2fe"/>
+              <circle cx="16" cy="16" r="2" fill="#00f2fe"/>
+              <circle cx="22" cy="16" r="2" fill="#00f2fe"/>
+              <circle cx="10" cy="16" r="2" fill="#00f2fe" opacity="0.5"/>
+              <circle cx="16" cy="16" r="2" fill="#00f2fe" opacity="0.5"/>
+              <circle cx="22" cy="16" r="2" fill="#00f2fe" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="ig-spec-body">
+            <span class="ig-spec-label">Thrust Nodes</span>
+            <span class="ig-spec-value">7 independent</span>
+            <span class="ig-spec-desc">Each node independently addressable for differential control</span>
+          </div>
+        </div>
+
+        <!-- Zero Moving Parts -->
+        <div class="ig-spec-card">
+          <div class="ig-spec-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <path d="M10 16 L14 20 L22 12" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="ig-spec-body">
+            <span class="ig-spec-label">Moving Parts (Underwater)</span>
+            <span class="ig-spec-value">Zero</span>
+            <span class="ig-spec-desc">No mechanical linkages below the waterline — nothing to foul or fail</span>
+          </div>
+        </div>
+
+        <!-- 3D-Printed Modular -->
+        <div class="ig-spec-card">
+          <div class="ig-spec-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="6" y="6" width="20" height="20" rx="3" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <line x1="6" y1="16" x2="26" y2="16" stroke="#00f2fe" stroke-width="1" opacity="0.3"/>
+              <line x1="16" y1="6" x2="16" y2="26" stroke="#00f2fe" stroke-width="1" opacity="0.3"/>
+              <rect x="10" y="10" width="4" height="4" rx="1" fill="#00f2fe"/>
+              <rect x="18" y="10" width="4" height="4" rx="1" fill="#00f2fe"/>
+              <rect x="10" y="18" width="4" height="4" rx="1" fill="#00f2fe"/>
+              <rect x="18" y="18" width="4" height="4" rx="1" fill="#00f2fe"/>
+            </svg>
+          </div>
+          <div class="ig-spec-body">
+            <span class="ig-spec-label">Manufacturing</span>
+            <span class="ig-spec-value">3D-Printed Modular</span>
+            <span class="ig-spec-desc">Regional manufacturing hubs via additive fabrication</span>
+          </div>
+        </div>
+
+        <!-- Software-Defined Vectoring -->
+        <div class="ig-spec-card">
+          <div class="ig-spec-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="6" width="24" height="20" rx="3" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <polygon points="12,11 20,16 12,21" fill="#00f2fe" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="ig-spec-body">
+            <span class="ig-spec-label">Vectoring</span>
+            <span class="ig-spec-value">Software-Defined</span>
+            <span class="ig-spec-desc">Yaw, pitch, and roll vectors calculated and executed in software</span>
+          </div>
+        </div>
+
+        <!-- Patent-Pending IP -->
+        <div class="ig-spec-card">
+          <div class="ig-spec-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4 L18 12 L26 12 L20 17 L22 25 L16 20 L10 25 L12 17 L6 12 L14 12 Z" 
+                    fill="rgba(0,242,254,0.08)" stroke="#00f2fe" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="ig-spec-body">
+            <span class="ig-spec-label">IP Status</span>
+            <span class="ig-spec-value">Patent-Pending</span>
+            <span class="ig-spec-desc">Proprietary ABLTV technology under active patent prosecution</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- SECTION 5: THE FLOATING BAR CONCEPT                     -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <section class="ig-section animate-in delay-4">
+      <h2 class="section-title">The Floating Bar Concept</h2>
+      <p class="section-subtitle">An aspirational lifestyle vessel showcasing the real-world application of ABLTV.</p>
+
+      <div class="ig-bar-container">
+        <svg viewBox="0 0 900 440" fill="none" xmlns="http://www.w3.org/2000/svg" class="ig-bar-svg">
+          <defs>
+            <linearGradient id="barHull" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.12)"/>
+              <stop offset="100%" stop-color="rgba(79,172,254,0.05)"/>
+            </linearGradient>
+            <linearGradient id="barDeck" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(15,23,42,0.6)"/>
+              <stop offset="100%" stop-color="rgba(15,23,42,0.3)"/>
+            </linearGradient>
+            <linearGradient id="barGlass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.15)"/>
+              <stop offset="100%" stop-color="rgba(79,172,254,0.08)"/>
+            </linearGradient>
+            <linearGradient id="barWater" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(0,242,254,0.2)"/>
+              <stop offset="100%" stop-color="rgba(0,242,254,0.05)"/>
+            </linearGradient>
+            <filter id="barGlow">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="waterRipple">
+              <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="5"/>
+              <feDisplacementMap in="SourceGraphic" scale="3"/>
+            </filter>
+          </defs>
+
+          <!-- Sky gradient -->
+          <rect x="0" y="0" width="900" height="440" fill="url(#barGlass)" opacity="0.3"/>
+
+          <!-- Stars -->
+          <circle cx="80" cy="30" r="1" fill="rgba(255,255,255,0.4)"/>
+          <circle cx="200" cy="50" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="350" cy="25" r="0.8" fill="rgba(255,255,255,0.3)"/>
+          <circle cx="500" cy="45" r="1" fill="rgba(255,255,255,0.4)"/>
+          <circle cx="650" cy="20" r="1.5" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="780" cy="38" r="0.8" fill="rgba(255,255,255,0.3)"/>
+          <circle cx="850" cy="55" r="1" fill="rgba(255,255,255,0.4)"/>
+          <circle cx="150" cy="65" r="0.6" fill="rgba(255,255,255,0.25)"/>
+          <circle cx="420" cy="15" r="0.7" fill="rgba(255,255,255,0.3)"/>
+
+          <!-- Moon -->
+          <circle cx="760" cy="60" r="22" fill="rgba(0,242,254,0.06)" stroke="rgba(0,242,254,0.12)" stroke-width="1"/>
+          <circle cx="756" cy="56" r="18" fill="rgba(242,238,230,0.08)"/>
+
+          <!-- Water body -->
+          <rect x="40" y="280" width="820" height="160" rx="8" fill="url(#barWater)"/>
+          
+          <!-- Water ripples -->
+          <path d="M50 300 C150 295, 250 305, 350 298 C450 292, 550 302, 650 296 C750 290, 800 300, 850 295" 
+                stroke="rgba(0,242,254,0.08)" stroke-width="1" fill="none"/>
+          <path d="M50 330 C180 325, 300 335, 400 328 C500 322, 600 332, 700 325" 
+                stroke="rgba(0,242,254,0.05)" stroke-width="1" fill="none"/>
+          <path d="M60 360 C200 355, 350 365, 500 358" 
+                stroke="rgba(0,242,254,0.03)" stroke-width="1" fill="none"/>
+
+          <!-- Hull -->
+          <path d="M120 260 C160 290, 220 310, 360 310 C440 310, 520 310, 600 310 
+                   C660 310, 720 300, 760 280 L740 310 C700 320, 620 330, 500 330 
+                   C380 330, 280 325, 200 320 Z" 
+                fill="url(#barHull)" stroke="rgba(0,242,254,0.2)" stroke-width="1.5"/>
+
+          <!-- Deck -->
+          <rect x="200" y="240" width="480" height="30" rx="6" fill="rgba(15,23,42,0.5)" stroke="rgba(0,242,254,0.08)" stroke-width="1"/>
+          
+          <!-- Deck railing -->
+          <line x1="210" y1="240" x2="210" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="250" y1="240" x2="250" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="300" y1="240" x2="300" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="350" y1="240" x2="350" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="400" y1="240" x2="400" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="450" y1="240" x2="450" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="500" y1="240" x2="500" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="550" y1="240" x2="550" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="600" y1="240" x2="600" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="650" y1="240" x2="650" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1.5"/>
+          <line x1="210" y1="232" x2="670" y2="232" stroke="rgba(0,242,254,0.15)" stroke-width="1"/>
+
+          <!-- Bar structure (glass enclosure) -->
+          <rect x="280" y="140" width="280" height="100" rx="8" fill="rgba(0,242,254,0.04)" stroke="rgba(0,242,254,0.12)" stroke-width="1" stroke-dasharray="4,2"/>
+          
+          <!-- Bar counter -->
+          <rect x="310" y="180" width="220" height="5" rx="2" fill="#00f2fe" opacity="0.4"/>
+          
+          <!-- Stools -->
+          <rect x="320" y="195" width="4" height="15" rx="1" fill="rgba(255,255,255,0.1)"/>
+          <rect x="316" y="208" width="12" height="3" rx="1" fill="rgba(255,255,255,0.1)"/>
+          
+          <rect x="370" y="195" width="4" height="15" rx="1" fill="rgba(255,255,255,0.1)"/>
+          <rect x="366" y="208" width="12" height="3" rx="1" fill="rgba(255,255,255,0.1)"/>
+          
+          <rect x="420" y="195" width="4" height="15" rx="1" fill="rgba(255,255,255,0.1)"/>
+          <rect x="416" y="208" width="12" height="3" rx="1" fill="rgba(255,255,255,0.1)"/>
+          
+          <rect x="470" y="195" width="4" height="15" rx="1" fill="rgba(255,255,255,0.1)"/>
+          <rect x="466" y="208" width="12" height="3" rx="1" fill="rgba(255,255,255,0.1)"/>
+
+          <!-- People silhouettes -->
+          <circle cx="340" cy="155" r="6" fill="rgba(255,255,255,0.08)"/>
+          <rect x="336" y="161" width="8" height="12" rx="2" fill="rgba(255,255,255,0.08)"/>
+          
+          <circle cx="400" cy="150" r="6" fill="rgba(255,255,255,0.08)"/>
+          <rect x="396" y="156" width="8" height="12" rx="2" fill="rgba(255,255,255,0.08)"/>
+          
+          <circle cx="460" cy="153" r="6" fill="rgba(255,255,255,0.08)"/>
+          <rect x="456" y="159" width="8" height="12" rx="2" fill="rgba(255,255,255,0.08)"/>
+
+          <!-- Roof structure -->
+          <path d="M260 140 L560 140" stroke="rgba(0,242,254,0.15)" stroke-width="2"/>
+          <rect x="280" y="132" width="260" height="8" rx="3" fill="rgba(0,242,254,0.06)" stroke="rgba(0,242,254,0.1)" stroke-width="0.8"/>
+          
+          <!-- Roof glow -->
+          <rect x="300" y="134" width="220" height="4" rx="2" fill="#00f2fe" opacity="0.15" filter="url(#barGlow)"/>
+
+          <!-- Label -->
+          <text x="450" y="115" text-anchor="middle" fill="#00f2fe" font-size="16" font-weight="800" font-family="Inter" letter-spacing="0.08em" filter="url(#barGlow)" opacity="0.9">FLOATING BAR</text>
+          <text x="450" y="128" text-anchor="middle" fill="rgba(148,163,184,0.5)" font-size="9" font-family="Inter">Powered by ABLTV · Zero Emissions · Silent Operation</text>
+
+          <!-- Thrust nodes on hull -->
+          <circle cx="700" cy="275" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1" filter="url(#barGlow)"/>
+          <circle cx="720" cy="285" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1" filter="url(#barGlow)"/>
+          <circle cx="735" cy="298" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1" filter="url(#barGlow)"/>
+
+          <!-- Wake / jet streams -->
+          <path d="M740 280 C770 278, 800 275, 830 272" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" opacity="0.3" fill="none"/>
+          <path d="M740 295 C775 293, 810 290, 840 287" stroke="#4facfe" stroke-width="1" stroke-linecap="round" opacity="0.2" fill="none"/>
+
+          <!-- Callout labels -->
+          <rect x="100" y="295" width="100" height="22" rx="11" fill="rgba(0,242,254,0.08)" stroke="rgba(0,242,254,0.12)" stroke-width="0.8"/>
+          <text x="150" y="310" text-anchor="middle" fill="#00f2fe" font-size="9" font-weight="600" font-family="Inter">ABLTV Array</text>
+          <line x1="150" y1="315" x2="200" y2="315" stroke="rgba(0,242,254,0.15)" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <line x1="200" y1="315" x2="710" y2="288" stroke="rgba(0,242,254,0.15)" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+          <rect x="100" y="340" width="110" height="22" rx="11" fill="rgba(255,255,255,0.04)" stroke="rgba(148,163,184,0.12)" stroke-width="0.8"/>
+          <text x="155" y="355" text-anchor="middle" fill="rgba(148,163,184,0.6)" font-size="9" font-weight="600" font-family="Inter">Clean Wake</text>
+          <line x1="155" y1="360" x2="200" y2="360" stroke="rgba(148,163,184,0.1)" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <line x1="200" y1="360" x2="740" y2="340" stroke="rgba(148,163,184,0.1)" stroke-width="0.8" stroke-dasharray="3,2"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- SECTION 6: MARKET OPPORTUNITY                           -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <section class="ig-section animate-in delay-5">
+      <h2 class="section-title">Market Opportunity</h2>
+      <p class="section-subtitle">The ABLTV platform addresses a massive global market with compelling tailwinds.</p>
+
+      <div class="ig-market-grid">
+        <!-- TAM Card -->
+        <div class="ig-market-card glass-box">
+          <div class="ig-market-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="16" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <text x="20" y="25" text-anchor="middle" fill="#00f2fe" font-size="14" font-weight="800" font-family="Inter">$</text>
+            </svg>
+          </div>
+          <h3 class="ig-market-title">$12B+ TAM</h3>
+          <p class="ig-market-desc">Total addressable market spanning recreational marine, commercial shipping, and defense sectors. ABLTV disrupts the entire marine propulsion category.</p>
+          <div class="ig-market-tags">
+            <span class="ig-market-tag">Recreational</span>
+            <span class="ig-market-tag">Commercial</span>
+            <span class="ig-market-tag">Defense</span>
+          </div>
+        </div>
+
+        <!-- 60% Fewer Failures Card -->
+        <div class="ig-market-card glass-box">
+          <div class="ig-market-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="16" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <path d="M14 20 L18 24 L26 16" stroke="#00f2fe" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="ig-market-title">60% Fewer Failure Points</h3>
+          <p class="ig-market-desc">60% of small-vessel engine failures stem from mechanical linkage or propeller/rudder snagging. ABLTV's no-moving-parts architecture eliminates this entire failure domain.</p>
+          <div class="ig-market-stats">
+            <div class="ig-market-stat">
+              <span class="ig-market-stat-num">60%</span>
+              <span class="ig-market-stat-label">Failure Reduction</span>
+            </div>
+            <div class="ig-market-stat">
+              <span class="ig-market-stat-num">~0</span>
+              <span class="ig-market-stat-label">Underwater Maintenance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regulatory Tailwinds Card -->
+        <div class="ig-market-card glass-box">
+          <div class="ig-market-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="16" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.08)"/>
+              <path d="M12 28 L20 12 L28 28" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="20" cy="12" r="2" fill="#00f2fe"/>
+              <line x1="14" y1="22" x2="26" y2="22" stroke="#00f2fe" stroke-width="1.5" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="ig-market-title">Regulatory Tailwinds</h3>
+          <p class="ig-market-desc">Global emissions regulations are tightening. Electric propulsion mandates in coastal zones favor ABLTV's silent, zero-emission, low-drag architecture.</p>
+          <div class="ig-market-tags">
+            <span class="ig-market-tag">EU Emissions</span>
+            <span class="ig-market-tag">EPA Standards</span>
+            <span class="ig-market-tag">IMO 2030</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom stat bar -->
+      <div class="ig-market-bar">
+        <div class="ig-market-bar-item">
+          <span class="ig-market-bar-num">12+</span>
+          <span class="ig-market-bar-label">Patent Assets</span>
+        </div>
+        <div class="ig-market-bar-divider"></div>
+        <div class="ig-market-bar-item">
+          <span class="ig-market-bar-num">100Hz</span>
+          <span class="ig-market-bar-label">Control Fidelity</span>
+        </div>
+        <div class="ig-market-bar-divider"></div>
+        <div class="ig-market-bar-item">
+          <span class="ig-market-bar-num">7</span>
+          <span class="ig-market-bar-label">Thrust Nodes</span>
+        </div>
+        <div class="ig-market-bar-divider"></div>
+        <div class="ig-market-bar-item">
+          <span class="ig-market-bar-num">0</span>
+          <span class="ig-market-bar-label">Moving Parts Underwater</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  /* ─── Infographics Page ─── */
+  .infographics-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+
+  .ig-section {
+    margin-bottom: 6rem;
+  }
+
+  /* ─── Era SVG Container ─── */
+  .ig-era-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+
+  .ig-era-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ─── Flow SVG Container ─── */
+  .ig-flow-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    overflow-x: auto;
+  }
+
+  .ig-flow-svg {
+    width: 100%;
+    height: auto;
+    min-width: 700px;
+    display: block;
+  }
+
+  /* ─── Technical Specs Grid ─── */
+  .ig-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .ig-spec-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+  }
+
+  .ig-spec-card:hover {
+    border-color: rgba(0, 242, 254, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+  }
+
+  .ig-spec-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 242, 254, 0.06);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 242, 254, 0.08);
+  }
+
+  .ig-spec-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .ig-spec-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .ig-spec-value {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .ig-spec-desc {
+    font-size: 0.82rem;
+    color: rgba(148, 163, 184, 0.6);
+    margin-top: 0.1rem;
+    line-height: 1.4;
+  }
+
+  /* ─── Floating Bar Container ─── */
+  .ig-bar-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+
+  .ig-bar-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ─── Market Grid ─── */
+  .ig-market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .ig-market-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ig-market-card .glass-box {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+  }
+
+  .ig-market-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(0, 242, 254, 0.06);
+    margin-bottom: 0.25rem;
+  }
+
+  .ig-market-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ig-market-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .ig-market-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+
+  .ig-market-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cyan);
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.12);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    letter-spacing: 0.03em;
+  }
+
+  .ig-market-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .ig-market-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .ig-market-stat-num {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+  }
+
+  .ig-market-stat-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ─── Market Bottom Bar ─── */
+  .ig-market-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.8rem 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    gap: 1rem;
+  }
+
+  .ig-market-bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .ig-market-bar-num {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+  }
+
+  .ig-market-bar-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .ig-market-bar-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--border-light);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .infographics-page {
+      padding: 4rem 1.5rem;
+    }
+
+    .ig-specs-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ig-market-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ig-market-bar {
+      flex-direction: column;
+      gap: 1.2rem;
+      padding: 1.5rem;
+    }
+
+    .ig-market-bar-divider {
+      width: 60%;
+      height: 1px;
+    }
+
+    .ig-market-stats {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .infographics-page {
+      padding: 3rem 1rem;
+    }
+    
+    .ig-section {
+      margin-bottom: 4rem;
+    }
+
+    .ig-spec-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+</style>

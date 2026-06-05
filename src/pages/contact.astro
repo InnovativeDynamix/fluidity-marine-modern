@@ -1,0 +1,382 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact | Fluidity Marine">
+  <main class="page">
+    <!-- Hero -->
+    <section class="contact-hero animate-in">
+      <h1 class="page-title">
+        Contact <span class="electric-text">Us</span>
+      </h1>
+      <p class="page-subtitle">
+        Get in touch with the team behind the maritime propulsion paradigm shift.
+      </p>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-cards animate-in delay-1">
+      <div class="card contact-card">
+        <div class="contact-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="M22 7l-10 7L2 7" />
+          </svg>
+        </div>
+        <h3 class="contact-card-label">Email</h3>
+        <a href="mailto:info@fluiditymarine.com" class="contact-card-value">info@fluiditymarine.com</a>
+      </div>
+
+      <div class="card contact-card">
+        <div class="contact-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+          </svg>
+        </div>
+        <h3 class="contact-card-label">Phone</h3>
+        <a href="tel:+13104352514" class="contact-card-value">310-435-2514</a>
+      </div>
+
+      <div class="card contact-card">
+        <div class="contact-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+        </div>
+        <h3 class="contact-card-label">Address</h3>
+        <p class="contact-card-value contact-card-address">
+          2415 General Pershing St.<br />
+          New Orleans, LA 70115
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <hr class="divider" />
+    <section class="contact-form-section animate-in delay-2">
+      <h2 class="section-title">Send a Message</h2>
+      <p class="section-subtitle">Have a question, partnership idea, or press inquiry? We'd love to hear from you.</p>
+
+      <form class="contact-form" action="#" method="POST" data-netlify="true">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Name</label>
+            <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email</label>
+            <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-subject" class="form-label">Subject</label>
+          <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="What is this regarding?" />
+        </div>
+        <div class="form-group">
+          <label for="contact-message" class="form-label">Message</label>
+          <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="Tell us more..." rows="6" required></textarea>
+        </div>
+        <button type="submit" class="button button-primary form-submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Connect With Us -->
+    <hr class="divider" />
+    <section class="contact-connect animate-in delay-3">
+      <h2 class="section-title">Connect With Us</h2>
+      <p class="section-subtitle">Follow the journey, invest in the future, and join the paradigm shift.</p>
+
+      <div class="connect-grid">
+        <a href="https://wefunder.com/fluidity" target="_blank" rel="noopener noreferrer" class="card connect-card connect-card-wefunder">
+          <div class="connect-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+            </svg>
+          </div>
+          <div class="connect-card-text">
+            <strong>Invest on Wefunder</strong>
+            <span>Be part of the maritime revolution</span>
+          </div>
+          <span class="connect-arrow">→</span>
+        </a>
+
+        <a href="https://linkedin.com/company/fluidity-marine" target="_blank" rel="noopener noreferrer" class="card connect-card">
+          <div class="connect-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+              <rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
+            </svg>
+          </div>
+          <div class="connect-card-text">
+            <strong>LinkedIn</strong>
+            <span>Follow for company updates</span>
+          </div>
+          <span class="connect-arrow">→</span>
+        </a>
+
+        <a href="https://twitter.com/fluiditymarine" target="_blank" rel="noopener noreferrer" class="card connect-card">
+          <div class="connect-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </div>
+          <div class="connect-card-text">
+            <strong>X / Twitter</strong>
+            <span>Latest news and announcements</span>
+          </div>
+          <span class="connect-arrow">→</span>
+        </a>
+
+        <a href="https://youtube.com/@fluiditymarine" target="_blank" rel="noopener noreferrer" class="card connect-card">
+          <div class="connect-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" />
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+            </svg>
+          </div>
+          <div class="connect-card-text">
+            <strong>YouTube</strong>
+            <span>Prototype demos and explainers</span>
+          </div>
+          <span class="connect-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* ─── Contact Hero ─── */
+  .contact-hero {
+    margin-bottom: 3rem;
+  }
+
+  /* ─── Contact Info Cards ─── */
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .contact-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(0, 242, 254, 0.08);
+    color: var(--cyan);
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-card-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin: 0 0 0.75rem;
+  }
+
+  .contact-card-value {
+    font-size: 1.05rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .contact-card a.contact-card-value:hover {
+    color: var(--cyan);
+  }
+
+  .contact-card-address {
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* ─── Contact Form ─── */
+  .contact-form-section {
+    max-width: 700px;
+  }
+
+  .contact-form {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+
+  .form-input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 0.95rem;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  .form-input:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 3px rgba(0, 242, 254, 0.12);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.6;
+  }
+
+  .form-submit {
+    align-self: flex-start;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+  }
+
+  /* ─── Connect Section ─── */
+  .contact-connect {
+    margin-bottom: 2rem;
+  }
+
+  .connect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+
+  .connect-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .connect-card:hover {
+    border-color: rgba(79, 172, 254, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+  }
+
+  .connect-card-wefunder {
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.06) 0%, rgba(79, 172, 254, 0.03) 100%);
+    border-color: rgba(0, 242, 254, 0.15);
+  }
+
+  .connect-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(0, 242, 254, 0.08);
+    color: var(--cyan);
+    flex-shrink: 0;
+  }
+
+  .connect-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .connect-card-text strong {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .connect-card-text span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .connect-arrow {
+    font-size: 1.2rem;
+    color: var(--cyan);
+    opacity: 0.5;
+    transition: opacity 0.2s, transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .connect-card:hover .connect-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+      padding: 1.5rem;
+    }
+
+    .form-submit {
+      align-self: stretch;
+      text-align: center;
+    }
+
+    .connect-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .connect-card-text span {
+      white-space: normal;
+    }
+  }
+</style>
