@@ -6,93 +6,47 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<section id="tech-hero">
 			<h1>Active Boundary Layer <span class="electric-text">Thrust Vectoring</span></h1>
-			<p class="tagline">The end of mechanical rudders. The beginning of digital hydrodynamics.</p>
+			<p class="tagline">The culmination of digital fluid dynamic control.</p>
 		</section>
 
-		<section id="moat-grid">
-			<div class="moat-card">
-				<h2>01. Parasitic Drag Termination</h2>
-				<p>By eliminating the rudder, we reclaim up to 12% of traditional propulsion energy lost to parasitic surface friction.</p>
-			</div>
-			
-			<div class="moat-card">
-				<h2>02. Transom Jet Array</h2>
-				<p>A synchronized 7-node thrust interface allows for millisecond-precision yaw control through differential boundary layer modulation.</p>
+		<section id="grid">
+			<div class="card">
+				<h2>ABLTV Core</h2>
+				<p>Our proprietary 7-node transom array modulates the boundary layer of the hull, enabling precise yaw control without mechanical rudders.</p>
 			</div>
 
-			<div class="moat-card">
-				<h2>03. Zero External Moving Parts</h2>
-				<p>Removing the #1 failure point in marine propulsion. No appendages to snag, break, or corrode below the waterline.</p>
+			<div class="card">
+				<h2>Differential Drag</h2>
+				<p>By modulating the thrust/drag ratio on individual nodes, we achieve better range and precision than traditional mechanical deflection.</p>
+			</div>
+
+			<div class="card">
+				<h2>Software Defined</h2>
+				<p>The system is entirely software-controlled, allowing for millisecond response times and automated station-keeping.</p>
 			</div>
 		</section>
 
-		<section id="cta">
-			<a href="https://wefunder.com/fluidity" class="button primary">Become a Part Owner</a>
-			<a href="/" class="button secondary">Back to Home</a>
-		</section>
+		<div class="simulator-link">
+			<h3>Want to see it in action?</h3>
+			<p>Explore our high-fidelity physics simulator (Desktop Only).</p>
+			<a href="/tools/simulator.html" class="button">Launch Simulator &rarr;</a>
+		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 4rem 2rem;
-		color: #e2e8f0;
-	}
-	h1 {
-		font-size: clamp(2.5rem, 6vw, 4rem);
-		font-weight: 800;
-		line-height: 1.1;
-		margin-bottom: 1.5rem;
-	}
-	.electric-text {
-		background: linear-gradient(to right, #00f2fe, #4facfe);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	.tagline {
-		font-size: 1.5rem;
-		color: #94a3b8;
-		margin-bottom: 4rem;
-	}
-	#moat-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-		margin-bottom: 4rem;
-	}
-	.moat-card {
-		background: rgba(255, 255, 255, 0.03);
-		padding: 2rem;
-		border-radius: 16px;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-	}
-	.moat-card h2 {
-		font-size: 1.25rem;
-		color: #fff;
-		margin-bottom: 1rem;
-	}
-	#cta {
-		display: flex;
-		gap: 1rem;
-	}
-	.button {
-		padding: 1rem 2rem;
-		border-radius: 10px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: transform 0.2s;
-	}
-	.button.primary {
-		background: #fff;
-		color: #050a0f;
-	}
-	.button.secondary {
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		color: #fff;
-	}
-	.button:hover {
-		transform: translateY(-2px);
-	}
+	main { max-width: 1000px; margin: 0 auto; padding: 6rem 2rem; }
+	h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; }
+	.tagline { font-size: 1.25rem; color: #94a3b8; margin-bottom: 5rem; }
+	
+	#grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 6rem; }
+	.card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 24px; }
+	.card h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
+	.card p { color: #94a3b8; line-height: 1.6; }
+
+	.simulator-link { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 4rem; border-radius: 32px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+	.simulator-link h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+	.simulator-link p { margin-bottom: 2rem; color: #94a3b8; }
+	
+	.button { display: inline-block; padding: 1rem 2rem; background: #00f2fe; color: #050a0f; border-radius: 12px; text-decoration: none; font-weight: 800; }
 </style>
