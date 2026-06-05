@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Investors | Fluidity Marine">
+	<main>
+		<section id="investor-hero">
+			<h1>Join the <span class="electric-text">Seed Phase</span></h1>
+			<p class="tagline">InnovativeDynamix is scaling the future of maritime technology. Participate in our equity crowdfunding round.</p>
+		</section>
+
+		<section id="investment-summary">
+			<div class="stat-card">
+				<h3>Stage</h3>
+				<p class="value">Seed (Open)</p>
+			</div>
+			<div class="stat-card">
+				<h3>Platform</h3>
+				<p class="value">Wefunder</p>
+			</div>
+			<div class="stat-card">
+				<h3>Tech Moat</h3>
+				<p class="value">ABLTV Patent-Pending</p>
+			</div>
+		</section>
+
+		<section id="vision-brief">
+			<h2>Scaling the Maritime Operating System</h2>
+			<p>Fluidity Marine is more than a propulsion company. We are building the modular IP core (ABLTV) that will power a new generation of high-efficiency, low-maintenance vessels. From commercial transit to aspirational lifestyle anchors like "The Floating Bar," our technology is the common denominator.</p>
+		</section>
+
+		<section id="cta-portal">
+			<div class="portal-box">
+				<h2>Ready to Invest?</h2>
+				<p>Review our formal disclosure and join the mission on Wefunder.</p>
+				<a href="https://wefunder.com/fluidity" class="button primary highlight">Invest on Wefunder &rarr;</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 4rem 2rem;
+		color: #e2e8f0;
+	}
+	h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+	.electric-text { background: linear-gradient(to right, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+	.tagline { font-size: 1.5rem; color: #94a3b8; margin-bottom: 4rem; }
+	
+	#investment-summary {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 5rem;
+	}
+	.stat-card {
+		background: #111827;
+		padding: 2rem;
+		border-radius: 12px;
+		border: 1px solid #374151;
+	}
+	.stat-card h3 { font-size: 0.875rem; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; }
+	.stat-card .value { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 0.5rem; }
+
+	#vision-brief { margin-bottom: 5rem; line-height: 1.8; font-size: 1.125rem; color: #94a3b8; }
+	#vision-brief h2 { color: #fff; margin-bottom: 1.5rem; }
+
+	#cta-portal {
+		background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+		padding: 4rem;
+		border-radius: 24px;
+		border: 1px solid rgba(255,255,255,0.1);
+		text-align: center;
+	}
+	.portal-box h2 { font-size: 2rem; margin-bottom: 1rem; }
+	.portal-box p { margin-bottom: 2.5rem; color: #94a3b8; }
+	
+	.button {
+		display: inline-block;
+		padding: 1.25rem 2.5rem;
+		border-radius: 12px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: all 0.2s;
+	}
+	.button.primary.highlight {
+		background: #00f2fe;
+		color: #0f172a;
+		box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+	}
+	.button:hover { transform: scale(1.02); filter: brightness(1.1); }
+</style>
