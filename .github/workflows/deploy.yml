@@ -1,0 +1,36 @@
+name: Deploy to Dreamhost
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Site
+        run: npm run build
+
+      - name: Deploy to Dreamhost
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DREAMHOST_SSH_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          REMOTE_HOST: ${{ secrets.DREAMHOST_HOST }}
+          REMOTE_USER: ${{ secrets.DREAMHOST_USER }}
+          TARGET: "/home/${{ secrets.DREAMHOST_USER }}/fluiditymarine.com/"
+          SOURCE: "dist/"
