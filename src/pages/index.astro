@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Fluidity Marine | Clean Electric Propulsion">
+<Layout title="Fluidity Marine | Rudderless Marine Propulsion">
   <!-- Animated Background -->
   <div class="bg-container">
     <div class="bg-gradient-overlay"></div>
@@ -14,69 +14,44 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- ─── 1. HERO ─── -->
     <div class="hero-content">
-      <div class="badge animate-in">
-        <span class="badge-dot"></span>
-        Seed Round Open on Wefunder
-      </div>
-
       <h1 class="hero-title animate-in delay-1">
-        Clean <span class="electric-text">Electric</span> Propulsion<br />
-        <span class="hero-subline">for our Seas.</span>
+        <span class="electric-text">Rudderless</span> Propulsion<br />
+        <span class="hero-subline">for Marine Vessels.</span>
       </h1>
 
       <p class="hero-tagline animate-in delay-2">
-        Replacing toxic outboard motors with modular, 3D-printed fluid intelligence.
-        The first rudderless marine propulsion system — powered by ABLTV.
+        Fluidity Marine is developing Active Boundary Layer Thrust Vectoring (ABLTV):
+        a synchronized array of water jets that replaces the mechanical rudder.
       </p>
 
       <div class="hero-actions animate-in delay-3">
-        <a href="https://wefunder.com/fluidity" class="button button-primary button-lg" target="_blank" rel="noopener">
-          Invest on Wefunder
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
         <a href="/technology" class="button button-secondary button-lg">
-          Explore the Technology
+          How It Works
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 17 16 12 7 7"/></svg>
         </a>
-        <a href="/tools/simulator.html" class="button button-secondary button-lg">
-          Launch Simulator
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        <a href="/investors" class="button button-primary button-lg">
+          Investor Information
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
     </div>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar animate-in delay-4">
-      <div class="stat-item">
-        <span class="stat-value">7</span>
-        <span class="stat-label">Thrust Nodes</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-value">100Hz</span>
-        <span class="stat-label">Control Loop</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-value">Zero</span>
-        <span class="stat-label">Mechanical Drag</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-value">Patent</span>
-        <span class="stat-label">Pending</span>
-      </div>
-    </div>
-
-    <!-- ─── 2. WHO WE ARE ─── -->
+    <!-- ─── ABOUT ─── -->
     <hr class="divider" />
-    <section class="who-section animate-in delay-1">
-      <h2 class="section-title">Who Are We?</h2>
-      <p class="section-subtitle">Innovators at the intersection of fluid dynamics and digital control.</p>
+    <section class="who-section animate-in delay-2">
+      <h2 class="section-title">What Is Fluidity Marine?</h2>
+      <p class="section-subtitle">A venture developing the first rudderless marine propulsion system.</p>
       <div class="who-layout">
         <div class="who-text">
           <p>
-            At Fluidity Marine, we are innovators and thought leaders in the maritime industry, driven by our passion for environmental responsibility and technological advancements. Our initial focus is on cost-effective electric boat motors featuring a novel impeller design and rudderless control — replacing existing fossil fuel outboard motors to minimize ecological damage and maximize marine safety.
+            Fluidity Marine is a division of <strong>InnovativeDynamix</strong>, an R&D company 
+            focused on marine propulsion technology. Our core technology, <strong>Active Boundary 
+            Layer Thrust Vectoring (ABLTV)</strong>, uses a synchronized array of water jets mounted 
+            at the transom to steer vessels — eliminating the mechanical rudder entirely.
+          </p>
+          <p>
+            We are currently raising a <strong>$5M Seed round</strong> to fund prototype manufacturing, 
+            sea trials, and team expansion.
           </p>
         </div>
         <div class="card about-card">
@@ -92,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <p class="about-bio">
-            Founder and driving force behind InnovativeDynamix and the ABLTV platform. Leading the transition from laboratory breakthroughs to global maritime infrastructure.
+            Founder of InnovativeDynamix and inventor of the ABLTV platform.
           </p>
           <div class="about-tags">
             <span class="about-tag">InnovativeDynamix</span>
@@ -102,349 +77,67 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- ─── VESSEL IMAGE ─── -->
-    <section class="image-break animate-in delay-2">
-      <div class="image-break-container">
-        <img src="/images/beyond-hulls.png" alt="Fluidity Marine ecosystem concept" class="full-width-image" />
-        <div class="image-caption">Beyond the Hull — The complete Fluidity Marine ecosystem: electric vessels, Floating Bar lifestyle anchor, and sustainable maritime infrastructure</div>
-      </div>
-    </section>
-
-    <!-- ─── 3. MISSION ─── -->
+    <!-- ─── EXPLORE ─── -->
     <hr class="divider" />
-    <section class="mission-section animate-in delay-2">
-      <h2 class="section-title">What is our Mission?</h2>
-      <p class="section-subtitle">Three pillars guide everything we build.</p>
-      <div class="mission-grid">
-        <div class="card mission-pillar">
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/>
-              <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-            </svg>
-          </div>
-          <h3>Environmental Stewardship</h3>
-          <p>Eliminate pollution from traditional propulsion. Protect marine ecosystems via electric impeller motors — zero emissions, no fuel, oil, or CO₂.</p>
-        </div>
-        <div class="card mission-pillar">
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="8" height="8" rx="1" ry="1"/>
-              <rect x="14" y="2" width="8" height="8" rx="1" ry="1"/>
-              <rect x="2" y="14" width="8" height="8" rx="1" ry="1"/>
-              <rect x="14" y="14" width="8" height="8" rx="1" ry="1"/>
-            </svg>
-          </div>
-          <h3>Innovation &amp; Advancement</h3>
-          <p>Groundbreaking impeller system delivering superior performance, efficiency, and safety. Continuous R&amp;D to set new industry standards for marine propulsion.</p>
-        </div>
-        <div class="card mission-pillar">
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8"/><path d="M12 18V6"/>
-            </svg>
-          </div>
-          <h3>Accessibility &amp; Affordability</h3>
-          <p>Cost-effective solutions to accelerate global adoption. Transition to electric impeller motors is within reach for boat owners and operators across every sector.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── 4. TECHNOLOGY FEATURES ─── -->
-    <hr class="divider" />
-    <section class="features-section animate-in delay-3">
-      <h2 class="section-title">A Look At Our Initial Ideas</h2>
-      <p class="section-subtitle">Eight innovations that define the next generation of marine propulsion.</p>
-      <div class="features-grid">
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-            </svg>
-          </div>
-          <h3>Electric Brushless Motors</h3>
-          <p>No toxic pollutants; clean, silent operation</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-            </svg>
-          </div>
-          <h3>Novel Impeller Design</h3>
-          <p>All-enclosed moving parts; no exposed propeller</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
-            </svg>
-          </div>
-          <h3>Modular Components</h3>
-          <p>Fully customizable solution per user needs</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Rudderless Steering</h3>
-          <p>Vector thrust control eliminates traditional rudder</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-          </div>
-          <h3>Integrated Renewables</h3>
-          <p>Charge on the water via solar/wind integration</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
-            </svg>
-          </div>
-          <h3>Advanced Controls</h3>
-          <p>Mobile app &amp; manual piloting options</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/>
-            </svg>
-          </div>
-          <h3>Manufactured On-Demand</h3>
-          <p>Custom 3D-printed to spec</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 14.899A7 7 0 119.9 4c.22 0 .44.01.66.04"/><path d="M14.9 9.9A7 7 0 1116 20"/><path d="M12 13a3 3 0 100-6 3 3 0 000 6z"/>
-            </svg>
-          </div>
-          <h3>Horizontal Nozzle Design</h3>
-          <p>Optimized pressure surface for maximum thrust</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── ABLTV DIAGRAM ─── -->
-    <section class="image-break animate-in delay-3">
-      <div class="image-break-container">
-        <img src="/images/propulsion-tech.png" alt="ABLTV propulsion system cross-section" class="full-width-image" />
-        <div class="image-caption">Active Boundary Layer Thrust Vectoring — 7-node transom cutaway showing jet modulation at the hydrodynamic interface</div>
-      </div>
-    </section>
-
-    <!-- ─── 5. BENEFITS ─── -->
-    <hr class="divider" />
-    <section class="benefits-section animate-in delay-4">
-      <h2 class="section-title">The Immediate Benefits</h2>
-      <p class="section-subtitle">Tangible advantages that make a difference from day one.</p>
-      <div class="benefits-grid">
-        <div class="card benefit-card">
-          <div class="benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/><polyline points="9 12 11 14 15 10"/>
-            </svg>
-          </div>
-          <h3>Eliminate Pollution</h3>
-          <p>No fuel, oil, or CO₂ emissions. Zero environmental footprint.</p>
-        </div>
-        <div class="card benefit-card">
-          <div class="benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-            </svg>
-          </div>
-          <h3>Zero Prop/Rudder Damage</h3>
-          <p>Protects aquatic flora and fauna. No more snagged props.</p>
-        </div>
-        <div class="card benefit-card">
-          <div class="benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/>
-            </svg>
-          </div>
-          <h3>Minimize Noise Impacts</h3>
-          <p>Silent electric operation reduces ecological stress on marine life.</p>
-        </div>
-        <div class="card benefit-card">
-          <div class="benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
-          </div>
-          <h3>Better Performance</h3>
-          <p>More thrust with less energy. Superior efficiency at every RPM.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── EXPLORE OUR SITE ─── -->
-    <hr class="divider" />
-    <section class="nav-cards-section animate-in delay-4">
-      <h2 class="section-title">Explore Our Site</h2>
-      <p class="section-subtitle">Dive deeper into the technology, venture, and mission.</p>
+    <section class="nav-cards-section animate-in delay-3">
+      <h2 class="section-title">Explore</h2>
+      <p class="section-subtitle">Learn more about the technology, venture, and team.</p>
 
       <div class="nav-card-grid">
         <a href="/technology" class="nav-card" style="position:relative; overflow:hidden;">
-          <!-- Large background SVG -->
           <div class="nav-card-bg" aria-hidden="true">
             <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.06;">
-              <!-- Hull cross-section -->
-              <path d="M50 200 C120 160, 200 140, 300 140 C350 140, 380 155, 400 180 L400 280 L50 280 Z" fill="var(--ocean)" stroke="var(--ocean)" stroke-width="1"/>
-              <!-- Water line -->
-              <path d="M0 220 C80 215, 160 210, 250 215 C320 218, 380 225, 400 230" stroke="var(--ocean)" stroke-width="1.5" fill="none" opacity="0.5"/>
-              <!-- Thrust nodes at transom -->
-              <circle cx="370" cy="190" r="10" fill="none" stroke="var(--ocean)" stroke-width="2"/>
-              <circle cx="385" cy="200" r="10" fill="none" stroke="var(--ocean)" stroke-width="2"/>
-              <circle cx="395" cy="215" r="10" fill="none" stroke="var(--ocean)" stroke-width="2"/>
-              <circle cx="398" cy="230" r="10" fill="none" stroke="var(--ocean)" stroke-width="2"/>
-              <!-- Jet streams -->
-              <path d="M395 200 C420 180, 440 160, 450 150" stroke="var(--ocean)" stroke-width="3" stroke-linecap="round" opacity="0.6" fill="none"/>
-              <path d="M398 215 C430 205, 445 190, 460 180" stroke="var(--electric)" stroke-width="2.5" stroke-linecap="round" opacity="0.4" fill="none"/>
-              <path d="M398 230 C430 225, 450 215, 465 205" stroke="var(--ocean)" stroke-width="2" stroke-linecap="round" opacity="0.3" fill="none"/>
-              <!-- Flow arrows -->
-              <path d="M100 200 L250 200" stroke="var(--ocean)" stroke-width="1" stroke-dasharray="4,4" fill="none" opacity="0.3"/>
-              <path d="M120 160 L220 160" stroke="var(--ocean)" stroke-width="1" stroke-dasharray="4,4" fill="none" opacity="0.3"/>
-              <!-- Grid dots -->
-              <circle cx="80" cy="120" r="2" fill="var(--ocean)" opacity="0.3"/>
-              <circle cx="320" cy="100" r="2" fill="var(--ocean)" opacity="0.3"/>
-              <circle cx="150" cy="100" r="1.5" fill="var(--ocean)" opacity="0.2"/>
-              <circle cx="280" cy="120" r="1.5" fill="var(--ocean)" opacity="0.2"/>
+              <path d="M50 200 C120 160, 200 140, 300 140 C350 140, 380 155, 400 180 L400 280 L50 280 Z" fill="var(--cyan)" stroke="var(--cyan)" stroke-width="1"/>
+              <path d="M0 220 C80 215, 160 210, 250 215 C320 218, 380 225, 400 230" stroke="var(--cyan)" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <circle cx="370" cy="190" r="10" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+              <circle cx="385" cy="200" r="10" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+              <circle cx="395" cy="215" r="10" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+              <circle cx="398" cy="230" r="10" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+              <path d="M395 200 C420 180, 440 160, 450 150" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round" opacity="0.6" fill="none"/>
+              <path d="M398 215 C430 205, 445 190, 460 180" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round" opacity="0.4" fill="none"/>
             </svg>
           </div>
           <div class="nav-card-content">
             <h3>Technology</h3>
-            <p>ABLTV deep dive — how rudderless thrust vectoring works</p>
-          </div>
-        </a>
-        <a href="/infographics" class="nav-card" style="position:relative; overflow:hidden;">
-          <div class="nav-card-bg" aria-hidden="true">
-            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.06;">
-              <!-- Bar chart -->
-              <rect x="60" y="220" width="40" height="120" rx="4" fill="var(--ocean)" opacity="0.5"/>
-              <rect x="120" y="160" width="40" height="180" rx="4" fill="var(--ocean)" opacity="0.4"/>
-              <rect x="180" y="120" width="40" height="220" rx="4" fill="var(--electric)" opacity="0.5"/>
-              <rect x="240" y="90" width="40" height="250" rx="4" fill="var(--ocean)" opacity="0.4"/>
-              <rect x="300" y="140" width="40" height="200" rx="4" fill="var(--ocean)" opacity="0.3"/>
-              <!-- Wave line -->
-              <path d="M20 350 C60 330, 100 370, 140 350 C180 330, 220 370, 260 350 C300 330, 340 370, 380 350" stroke="var(--ocean)" stroke-width="2" fill="none" opacity="0.4"/>
-              <!-- Data points -->
-              <circle cx="90" cy="230" r="4" fill="var(--ocean)" opacity="0.5"/>
-              <circle cx="200" cy="130" r="5" fill="var(--electric)" opacity="0.6"/>
-              <circle cx="310" cy="100" r="3" fill="var(--ocean)" opacity="0.4"/>
-              <!-- Grid lines -->
-              <line x1="40" y1="80" x2="380" y2="80" stroke="var(--ocean)" stroke-width="0.5" opacity="0.15"/>
-              <line x1="40" y1="160" x2="380" y2="160" stroke="var(--ocean)" stroke-width="0.5" opacity="0.15"/>
-              <line x1="40" y1="240" x2="380" y2="240" stroke="var(--ocean)" stroke-width="0.5" opacity="0.15"/>
-            </svg>
-          </div>
-          <div class="nav-card-content">
-            <h3>Infographics</h3>
-            <p>Visual diagrams and technical illustrations</p>
-          </div>
-        </a>
-        <a href="/about" class="nav-card" style="position:relative; overflow:hidden;">
-          <div class="nav-card-bg" aria-hidden="true">
-            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.06;">
-              <!-- Compass rose -->
-              <circle cx="200" cy="200" r="120" stroke="var(--ocean)" stroke-width="1.5" fill="none" opacity="0.4"/>
-              <circle cx="200" cy="200" r="80" stroke="var(--ocean)" stroke-width="1" fill="none" opacity="0.3"/>
-              <!-- Cardinal points -->
-              <polygon points="200,60 195,120 205,120" fill="var(--ocean)" opacity="0.5"/>
-              <polygon points="200,340 195,280 205,280" fill="var(--ocean)" opacity="0.3"/>
-              <polygon points="60,200 120,195 120,205" fill="var(--ocean)" opacity="0.3"/>
-              <polygon points="340,200 280,195 280,205" fill="var(--ocean)" opacity="0.3"/>
-              <!-- Venture markers -->
-              <circle cx="200" cy="200" r="8" fill="var(--gold)" opacity="0.5"/>
-              <text x="170" y="150" fill="var(--gold)" font-size="10" opacity="0.5" font-family="Inter">Fluidity Marine</text>
-              <circle cx="150" cy="140" r="4" fill="var(--electric)" opacity="0.4"/>
-              <circle cx="260" cy="150" r="4" fill="var(--electric)" opacity="0.4"/>
-              <circle cx="190" cy="270" r="4" fill="var(--electric)" opacity="0.4"/>
-              <!-- Wave rings -->
-              <circle cx="200" cy="200" r="140" stroke="var(--ocean)" stroke-width="0.5" opacity="0.15"/>
-              <circle cx="200" cy="200" r="160" stroke="var(--ocean)" stroke-width="0.5" opacity="0.1"/>
-            </svg>
-          </div>
-          <div class="nav-card-content">
-            <h3>About</h3>
-            <p>The venture portfolio: Fluidity Marine, Floating Bar, ZumZ</p>
+            <p>How ABLTV works — the physics of boundary layer thrust vectoring</p>
           </div>
         </a>
         <a href="/investors" class="nav-card" style="position:relative; overflow:hidden;">
           <div class="nav-card-bg" aria-hidden="true">
             <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.06;">
-              <!-- Growth chart -->
-              <path d="M40 340 L80 320 L120 280 L160 260 L200 200 L240 160 L280 100 L320 80 L360 60" stroke="var(--ocean)" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <!-- Area under curve -->
-              <path d="M40 340 L80 320 L120 280 L160 260 L200 200 L240 160 L280 100 L320 80 L360 60 L360 340 Z" fill="url(#investGrad)" opacity="0.3"/>
-              <!-- Grid -->
-              <line x1="40" y1="100" x2="360" y2="100" stroke="var(--ocean)" stroke-width="0.5" opacity="0.15"/>
-              <line x1="40" y1="180" x2="360" y2="180" stroke="var(--ocean)" stroke-width="0.5" opacity="0.15"/>
-              <line x1="40" y1="260" x2="360" y2="260" stroke="var(--ocean)" stroke-width="0.5" opacity="0.15"/>
-              <!-- Data dots -->
-              <circle cx="80" cy="320" r="4" fill="var(--ocean)" opacity="0.4"/>
-              <circle cx="160" cy="260" r="5" fill="var(--ocean)" opacity="0.5"/>
-              <circle cx="240" cy="160" r="6" fill="var(--electric)" opacity="0.6"/>
-              <circle cx="320" cy="80" r="5" fill="var(--gold)" opacity="0.5"/>
-              <!-- Dollar sign -->
-              <text x="300" y="60" fill="var(--gold)" font-size="24" opacity="0.6" font-family="Inter">$</text>
-              <defs>
-                <linearGradient id="investGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="var(--ocean)" stop-opacity="0.3"/>
-                  <stop offset="100%" stop-color="var(--ocean)" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
+              <path d="M40 340 L80 320 L120 280 L160 260 L200 200 L240 160 L280 100 L320 80 L360 60" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <line x1="40" y1="100" x2="360" y2="100" stroke="var(--cyan)" stroke-width="0.5" opacity="0.15"/>
+              <line x1="40" y1="180" x2="360" y2="180" stroke="var(--cyan)" stroke-width="0.5" opacity="0.15"/>
+              <line x1="40" y1="260" x2="360" y2="260" stroke="var(--cyan)" stroke-width="0.5" opacity="0.15"/>
             </svg>
           </div>
           <div class="nav-card-content">
             <h3>Investors</h3>
-            <p>$5M pre-money seed round, open on Wefunder</p>
+            <p>$5M seed round — open for qualified investors</p>
           </div>
         </a>
-        <a href="/press" class="nav-card" style="position:relative; overflow:hidden;">
+        <a href="/about" class="nav-card" style="position:relative; overflow:hidden;">
           <div class="nav-card-bg" aria-hidden="true">
             <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.06;">
-              <!-- Document -->
-              <path d="M80 40 L280 40 L320 80 L320 360 L80 360 Z" fill="none" stroke="var(--ocean)" stroke-width="1.5"/>
-              <!-- Text lines -->
-              <line x1="110" y1="100" x2="290" y2="100" stroke="var(--ocean)" stroke-width="2" opacity="0.5"/>
-              <line x1="110" y1="130" x2="250" y2="130" stroke="var(--ocean)" stroke-width="2" opacity="0.4"/>
-              <line x1="110" y1="160" x2="280" y2="160" stroke="var(--ocean)" stroke-width="2" opacity="0.3"/>
-              <line x1="110" y1="190" x2="200" y2="190" stroke="var(--ocean)" stroke-width="2" opacity="0.3"/>
-              <!-- Image placeholder -->
-              <rect x="110" y="220" width="80" height="60" rx="4" fill="none" stroke="var(--ocean)" stroke-width="1.5" opacity="0.3"/>
-              <polygon points="120,270 140,245 160,260 175,240 190,270" fill="var(--ocean)" opacity="0.2"/>
-              <!-- Play button -->
-              <circle cx="250" cy="310" r="30" fill="none" stroke="var(--electric)" stroke-width="1.5" opacity="0.4"/>
-              <polygon points="242,295 242,325 265,310" fill="var(--electric)" opacity="0.4"/>
+              <circle cx="200" cy="200" r="120" stroke="var(--cyan)" stroke-width="1.5" fill="none" opacity="0.4"/>
+              <polygon points="200,60 195,120 205,120" fill="var(--cyan)" opacity="0.5"/>
+              <polygon points="200,340 195,280 205,280" fill="var(--cyan)" opacity="0.3"/>
+              <polygon points="60,200 120,195 120,205" fill="var(--cyan)" opacity="0.3"/>
+              <polygon points="340,200 280,195 280,205" fill="var(--cyan)" opacity="0.3"/>
+              <circle cx="200" cy="200" r="8" fill="var(--amber)" opacity="0.5"/>
             </svg>
           </div>
           <div class="nav-card-content">
-            <h3>Press Kit</h3>
-            <p>Media assets, brand guide, pitch decks</p>
+            <h3>About</h3>
+            <p>The venture portfolio: Fluidity Marine, InnovativeDynamix, and The Floating Bar</p>
           </div>
         </a>
         <a href="/contact" class="nav-card" style="position:relative; overflow:hidden;">
           <div class="nav-card-bg" aria-hidden="true">
             <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.06;">
-              <!-- Location pin -->
-              <path d="M200 60 C145 60 100 105 100 160 C100 240 200 340 200 340 C200 340 300 240 300 160 C300 105 255 60 200 60 Z" fill="none" stroke="var(--gold)" stroke-width="2"/>
-              <circle cx="200" cy="160" r="25" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.5"/>
-              <!-- Envelope -->
-              <rect x="60" y="240" width="120" height="80" rx="8" fill="none" stroke="var(--ocean)" stroke-width="1.5" opacity="0.4"/>
-              <path d="M60 240 L120 290 L180 240" stroke="var(--ocean)" stroke-width="1.5" fill="none" opacity="0.4"/>
-              <!-- Phone -->
-              <rect x="250" y="230" width="50" height="90" rx="10" fill="none" stroke="var(--electric)" stroke-width="1.5" opacity="0.4"/>
-              <circle cx="275" cy="300" r="4" fill="var(--electric)" opacity="0.4"/>
-              <!-- Radio waves -->
-              <path d="M310 260 C330 275, 330 295, 310 310" stroke="var(--ocean)" stroke-width="1.5" fill="none" opacity="0.3"/>
-              <path d="M325 245 C355 265, 355 305, 325 325" stroke="var(--ocean)" stroke-width="1" fill="none" opacity="0.2"/>
+              <path d="M200 60 C145 60 100 105 100 160 C100 240 200 340 200 340 C200 340 300 240 300 160 C300 105 255 60 200 60 Z" fill="none" stroke="var(--amber)" stroke-width="2"/>
+              <circle cx="200" cy="160" r="25" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.5"/>
+              <rect x="60" y="240" width="120" height="80" rx="8" fill="none" stroke="var(--cyan)" stroke-width="1.5" opacity="0.4"/>
             </svg>
           </div>
           <div class="nav-card-content">
@@ -455,29 +148,29 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- ─── 6. TARGET AUDIENCES ─── -->
+    <!-- ─── PORTFOLIO ─── -->
     <hr class="divider" />
     <section class="audience-section animate-in delay-4">
-      <h2 class="section-title">Who Needs This Now?</h2>
-      <p class="section-subtitle">Our technology serves a wide range of maritime operators.</p>
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-subtitle">Entities within the InnovativeDynamix group.</p>
       <div class="audience-grid">
+        <div class="card audience-card">
+          <div class="audience-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>InnovativeDynamix</h3>
+          <p>Parent R&D entity and IP holding company</p>
+        </div>
         <div class="card audience-card">
           <div class="audience-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <h3>Recreational Boat Owners</h3>
-          <p>Ecologically conscious leisure boaters for fishing, cruising, water sports</p>
-        </div>
-        <div class="card audience-card">
-          <div class="audience-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
-            </svg>
-          </div>
-          <h3>Commercial Fishermen</h3>
-          <p>Reliable, efficient propulsion that protects their livelihood and the waters they fish</p>
+          <h3>Fluidity Marine</h3>
+          <p>Flagship vessel brand — ABLTV-equipped, raising $5M Seed</p>
         </div>
         <div class="card audience-card">
           <div class="audience-icon">
@@ -485,345 +178,133 @@ import Layout from '../layouts/Layout.astro';
               <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
           </div>
-          <h3>Marine Tour Operators</h3>
-          <p>Sustainable eco-tourism experiences with zero-emission operations</p>
-        </div>
-        <div class="card audience-card">
-          <div class="audience-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Maritime Enforcement</h3>
-          <p>Dependable, silent propulsion for patrol and law enforcement</p>
-        </div>
-        <div class="card audience-card">
-          <div class="audience-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Environmental Organizations</h3>
-          <p>Low-impact propulsion for research and conservation missions</p>
-        </div>
-        <div class="card audience-card">
-          <div class="audience-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
-            </svg>
-          </div>
-          <h3>Waterway Maintenance</h3>
-          <p>Efficiency and maneuverability for dredging and marine services</p>
+          <h3>The Floating Bar</h3>
+          <p>Lifestyle and community-facing brand within the group</p>
         </div>
       </div>
     </section>
-
-    <!-- ─── FLOATING BAR IMAGE ─── -->
-    <section class="image-break animate-in delay-4">
-      <div class="image-break-container">
-        <img src="/images/floating-bar.png" alt="The Floating Bar concept in Bocas del Toro, Panama" class="full-width-image" />
-        <div class="image-caption">The Floating Bar — Aspirational lifestyle anchor in Bocas del Toro, Panama</div>
-      </div>
-    </section>
-
-    <!-- ─── 7. INVESTMENT CTA ─── -->
-    <hr class="divider" />
-    <section class="invest-cta-section animate-in delay-4">
-      <div class="glass-box invest-cta-box">
-        <div class="invest-cta-badge">Seed Round Open</div>
-        <h2 class="invest-cta-title">Join Us in Shaping the Future of Marine Propulsion</h2>
-        <p class="invest-cta-text">
-          Fluidity Marine is building the modular IP core that will power a new generation of high-efficiency, 
-          low-maintenance vessels. Our ABLTV system eliminates mechanical rudders entirely — replacing them 
-          with software-defined thrust vectoring. This is your opportunity to participate in a fundamental 
-          paradigm shift in marine propulsion technology.
-        </p>
-        <div class="invest-cta-slogan">Be Part of the Solution, Not the Pollution!</div>
-        <div class="invest-cta-actions">
-          <a href="https://wefunder.com/fluidity" class="button button-primary button-lg" target="_blank" rel="noopener">
-            Invest on Wefunder
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="/investors" class="button button-secondary button-lg">
-            View Investor Deck
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 17 16 12 7 7"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
   </main>
-
-  <!-- ─── 8. CAMPAIGN ALERT ─── -->
-  <div id="campaign-alert" class="animate-in delay-5">
-    <div class="pulse-icon"></div>
-    <div class="campaign-content">
-      <h2>Crowdfunding Active</h2>
-      <p>Our Seed Phase is live on Wefunder. Participate in the future of clean, electric marine propulsion.</p>
-      <a href="https://wefunder.com/fluidity" target="_blank" rel="noopener noreferrer" class="learn-more">Invest on Wefunder →</a>
-    </div>
-  </div>
 </Layout>
 
-<script>
-  // Particle field background
-  document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('particles');
-    if (!container) return;
-
-    const canvas = document.createElement('canvas');
-    canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%';
-    container.appendChild(canvas);
-    const ctx = canvas.getContext('2d');
-
-    let w, h, particles = [];
-    const COUNT = 80;
-
-    function resize() {
-      w = canvas.width = container.offsetWidth;
-      h = canvas.height = container.offsetHeight;
-    }
-
-    function init() {
-      resize();
-      particles = Array.from({ length: COUNT }, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        r: Math.random() * 2 + 0.5,
-        alpha: Math.random() * 0.4 + 0.1
-      }));
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      particles.forEach(p => {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0) p.x = w;
-        if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h;
-        if (p.y > h) p.y = 0;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 242, 254, ${p.alpha})`;
-        ctx.fill();
-      });
-
-      // Draw connections
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(0, 242, 254, ${0.08 * (1 - dist / 120)})`;
-            ctx.stroke();
-          }
-        }
-      }
-
-      requestAnimationFrame(draw);
-    }
-
-    init();
-    draw();
-    window.addEventListener('resize', resize);
-  });
-</script>
-
 <style>
-  /* ─── Animated Background ─── */
-  .bg-container {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-  }
-
-  .bg-gradient-overlay {
-    position: absolute;
-    inset: 0;
-    background: 
-      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(79, 172, 254, 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(0, 242, 254, 0.05) 0%, transparent 50%),
-      radial-gradient(ellipse 50% 40% at 20% 70%, rgba(124, 58, 237, 0.04) 0%, transparent 50%);
-  }
-
-  .particle-field {
-    position: absolute;
-    inset: 0;
-  }
-
-  /* ─── Hero Content ─── */
+  /* ─── Hero ─── */
   .hero-content {
-    position: relative;
-    z-index: 1;
     max-width: 800px;
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 1.2rem;
-    background: rgba(0, 242, 254, 0.08);
-    border: 1px solid rgba(0, 242, 254, 0.15);
-    border-radius: 100px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--cyan);
-    margin-bottom: 2.5rem;
-  }
-
-  .badge-dot {
-    width: 7px;
-    height: 7px;
-    background: var(--cyan);
-    border-radius: 50%;
-    animation: pulse-glow 2s infinite;
+    margin: 2rem auto 4rem;
+    text-align: center;
   }
 
   .hero-title {
-    font-size: clamp(2.8rem, 8vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
-    line-height: 1.05;
+    line-height: 1.1;
     margin: 0 0 1.5rem;
     color: #fff;
     letter-spacing: -0.03em;
   }
 
   .hero-subline {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 400;
     color: var(--text-muted);
-    font-weight: 600;
+    letter-spacing: 0.08em;
   }
 
   .hero-tagline {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
-    margin: 0 0 2.5rem;
-    max-width: 600px;
+    max-width: 680px;
+    margin: 0 auto 2.5rem;
     line-height: 1.7;
   }
 
   .hero-actions {
     display: flex;
     gap: 1rem;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
-  .button-lg {
-    padding: 1.1rem 2.5rem;
-    font-size: 1rem;
-  }
-
-  /* ─── Stats Bar ─── */
-  .stats-bar {
-    position: relative;
-    z-index: 1;
-    display: flex;
+  .badge {
+    display: inline-flex;
     align-items: center;
-    gap: 2rem;
-    margin-top: 5rem;
-    padding: 1.5rem 2rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-    max-width: 700px;
-  }
-
-  .stat-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .stat-value {
-    font-size: 1.5rem;
-    font-weight: 800;
+    gap: 0.5rem;
+    background: rgba(0, 240, 255, 0.08);
+    border: 1px solid rgba(0, 240, 255, 0.15);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
     color: var(--cyan);
+    margin-bottom: 2rem;
   }
 
-  .stat-label {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: pulse-dot 2s ease infinite;
   }
 
-  .stat-divider {
-    width: 1px;
-    height: 35px;
-    background: var(--border);
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
   }
 
-  /* ─── Who We Are ─── */
-  .who-section {
-    position: relative;
-    z-index: 1;
-  }
+  /* ─── About ─── */
+  .who-section { margin-bottom: 5rem; }
 
   .who-layout {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 2rem;
     align-items: start;
   }
 
   .who-text p {
     color: var(--text-muted);
-    font-size: 1.05rem;
     line-height: 1.8;
-    margin: 0;
+    margin: 0 0 1rem;
+    font-size: 1rem;
   }
 
-  .about-card {
-    padding: 2rem;
-  }
+  .about-card { padding: 1.5rem; }
 
   .about-card-header {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
     margin-bottom: 1rem;
   }
 
   .about-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(0, 240, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    border-radius: 50%;
-    background: rgba(79, 172, 254, 0.1);
-    color: var(--blue);
+    color: var(--cyan);
+    flex-shrink: 0;
   }
 
   .about-card-header h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: #fff;
-    margin: 0 0 0.15rem;
+    margin: 0;
   }
 
   .about-role {
-    font-size: 0.75rem;
-    color: var(--cyan);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 
   .about-bio {
     color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 0 1rem;
     font-size: 0.9rem;
-    line-height: 1.6;
-    margin: 0 0 1.2rem;
   }
 
   .about-tags {
@@ -833,143 +314,71 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .about-tag {
-    padding: 0.25rem 0.75rem;
-    background: rgba(0, 242, 254, 0.06);
-    border: 1px solid rgba(0, 242, 254, 0.1);
-    border-radius: 100px;
     font-size: 0.75rem;
+    background: rgba(0, 240, 255, 0.06);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    padding: 0.2rem 0.7rem;
+    border-radius: 100px;
     color: var(--cyan);
-    font-weight: 600;
   }
 
-  /* ─── Mission Section ─── */
-  .mission-section {
-    position: relative;
-    z-index: 1;
-  }
+  /* ─── Nav Cards ─── */
+  .nav-cards-section { margin-bottom: 5rem; }
 
-  .mission-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .mission-pillar {
-    padding: 2rem;
-  }
-
-  .pillar-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: rgba(0, 242, 254, 0.08);
-    color: var(--cyan);
-    margin-bottom: 1.2rem;
-  }
-
-  .mission-pillar h3 {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0 0 0.8rem;
-  }
-
-  .mission-pillar p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  /* ─── Features Section ─── */
-  .features-section {
-    position: relative;
-    z-index: 1;
-  }
-
-  .features-grid {
+  .nav-card-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
 
-  .feature-card {
-    padding: 1.5rem;
+  .nav-card {
+    padding: 2rem;
+    border-radius: var(--radius-xl, 20px);
+    text-decoration: none;
+    background: var(--bg-card, rgba(10,22,40,0.5));
+    border: 1px solid var(--border, rgba(13,194,176,0.12));
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
   }
 
-  .feature-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: rgba(0, 242, 254, 0.08);
-    color: var(--cyan);
-    margin-bottom: 1rem;
+  .nav-card:hover {
+    border-color: rgba(0, 240, 255, 0.2);
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.05);
   }
 
-  .feature-card h3 {
-    font-size: 1rem;
+  .nav-card-content {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+  }
+
+  .nav-card-content h3 {
+    font-size: 1.1rem;
     color: #fff;
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.5rem;
   }
 
-  .feature-card p {
+  .nav-card-content p {
     font-size: 0.85rem;
     color: var(--text-muted);
+    margin: 0;
     line-height: 1.5;
-    margin: 0;
   }
 
-  /* ─── Benefits Section ─── */
-  .benefits-section {
-    position: relative;
-    z-index: 1;
+  .nav-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
 
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-  }
-
-  .benefit-card {
-    padding: 2rem;
-  }
-
-  .benefit-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: rgba(0, 242, 254, 0.08);
-    color: var(--cyan);
-    margin-bottom: 1.2rem;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.15rem;
-    color: #fff;
-    margin: 0 0 0.6rem;
-  }
-
-  .benefit-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* ─── Audience Section ─── */
-  .audience-section {
-    position: relative;
-    z-index: 1;
-  }
+  /* ─── Portfolio ─── */
+  .audience-section { margin-bottom: 3rem; }
 
   .audience-grid {
     display: grid;
@@ -978,23 +387,24 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .audience-card {
-    padding: 1.75rem;
+    padding: 2rem;
+    text-align: center;
   }
 
   .audience-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 12px;
-    background: rgba(0, 242, 254, 0.08);
+    background: rgba(0, 240, 255, 0.06);
     color: var(--cyan);
     margin-bottom: 1rem;
   }
 
   .audience-card h3 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: #fff;
     margin: 0 0 0.5rem;
   }
@@ -1006,248 +416,11 @@ import Layout from '../layouts/Layout.astro';
     margin: 0;
   }
 
-  /* ─── Investment CTA ─── */
-  .invest-cta-section {
-    position: relative;
-    z-index: 1;
-    margin-top: 0;
-  }
-
-  .invest-cta-box {
-    text-align: center;
-    padding: 4rem;
-    background: linear-gradient(135deg, rgba(0, 242, 254, 0.06) 0%, rgba(79, 172, 254, 0.03) 100%);
-  }
-
-  .invest-cta-badge {
-    display: inline-block;
-    padding: 0.3rem 1.2rem;
-    background: rgba(0, 242, 254, 0.1);
-    border: 1px solid rgba(0, 242, 254, 0.2);
-    border-radius: 100px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--cyan);
-    margin-bottom: 1.5rem;
-  }
-
-  .invest-cta-title {
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    font-weight: 900;
-    color: #fff;
-    margin: 0 0 1.5rem;
-    line-height: 1.2;
-  }
-
-  .invest-cta-text {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    max-width: 680px;
-    margin: 0 auto 1.5rem;
-    line-height: 1.7;
-  }
-
-  .invest-cta-slogan {
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: var(--cyan);
-    margin-bottom: 2rem;
-    letter-spacing: 0.02em;
-  }
-
-  .invest-cta-actions {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /* ─── Campaign Alert ─── */
-  #campaign-alert {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 360px;
-    background: var(--bg-glass);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-    border-radius: var(--radius-lg);
-    z-index: 50;
-    display: flex;
-    gap: 1rem;
-  }
-
-  .pulse-icon {
-    width: 10px;
-    height: 10px;
-    min-width: 10px;
-    background: var(--cyan);
-    border-radius: 50%;
-    margin-top: 4px;
-    box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.4);
-    animation: pulse-glow 2s infinite;
-  }
-
-  .campaign-content h2 {
-    font-size: 1rem;
-    margin: 0 0 0.4rem;
-    color: #fff;
-  }
-
-  .campaign-content p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin: 0 0 0.8rem;
-    line-height: 1.5;
-  }
-
-  .learn-more {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--cyan);
-    text-decoration: none;
-  }
-
-  .learn-more:hover { text-decoration: underline; }
-
-  /* ─── Vessel Background Overlay ─── */
-  .vessel-bg-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    opacity: 0.08;
-    background-image: url('/images/hero-vessel.png');
-    background-size: cover;
-    background-position: center;
-    mix-blend-mode: luminosity;
-    pointer-events: none;
-  }
-
-  /* ─── Image Break Sections ─── */
-  .image-break {
-    position: relative;
-    z-index: 1;
-    margin: 3rem auto;
-    text-align: center;
-  }
-
-  .image-break-container {
-    max-width: 900px;
-    margin: 0 auto;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    border: 1px solid var(--border);
-  }
-
-  .full-width-image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .image-caption {
-    text-align: center;
-    padding: 1rem;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    line-height: 1.5;
-  }
-
-  /* ─── Navigation Cards ─── */
-  .nav-cards-section {
-    position: relative;
-    z-index: 1;
-    margin: 5rem 0;
-  }
-
-  .nav-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .nav-card {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    min-height: 200px;
-    background: var(--bg-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border-light, var(--border));
-    border-radius: var(--radius-xl);
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    justify-content: flex-end;
-  }
-
-  .nav-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--ocean, var(--cyan));
-    box-shadow: 0 0 40px rgba(13, 212, 176, 0.15);
-  }
-
-  .nav-card-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .nav-card-content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .nav-card h3 {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #fff;
-    margin: 0 0 0.4rem;
-    letter-spacing: -0.02em;
-  }
-
-  .nav-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin: 0;
-    line-height: 1.5;
-    max-width: 220px;
-  }
-
   /* ─── Responsive ─── */
-  @media (max-width: 1024px) {
-    .features-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
   @media (max-width: 768px) {
-    .stats-bar { flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .stat-divider { display: none; }
-    #campaign-alert { width: calc(100% - 2rem); right: 1rem; bottom: 1rem; }
-    .hero-actions { flex-direction: column; }
-    .button-lg { justify-content: center; }
-
     .who-layout { grid-template-columns: 1fr; }
-
-    .mission-grid { grid-template-columns: 1fr; }
-
-    .features-grid { grid-template-columns: 1fr; }
-
-    .benefits-grid { grid-template-columns: 1fr; }
-
+    .nav-card-grid { grid-template-columns: 1fr 1fr; }
     .audience-grid { grid-template-columns: 1fr; }
-
-    .invest-cta-box { padding: 2.5rem 1.5rem; }
-
-    .invest-cta-actions { flex-direction: column; align-items: center; }
+    .hero-actions { flex-direction: column; align-items: center; }
   }
 </style>
