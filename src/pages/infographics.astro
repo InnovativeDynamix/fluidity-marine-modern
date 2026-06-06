@@ -135,20 +135,21 @@ import Layout from '../layouts/Layout.astro';
           <path d="M520 195 C600 190, 700 188, 800 190" stroke="rgba(0,242,254,0.08)" stroke-width="1" fill="none"/>
           <path d="M510 210 C630 205, 750 202, 830 208" stroke="rgba(0,242,254,0.05)" stroke-width="1" fill="none"/>
 
-          <!-- Overhead mini-diagram: 7 jets on transom -->
-          <g transform="translate(580, 228) scale(0.7)">
-            <rect x="0" y="0" width="220" height="70" rx="10" fill="rgba(0,242,254,0.04)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
-            <text x="110" y="16" text-anchor="middle" fill="rgba(148,163,184,0.6)" font-size="10" font-weight="600" font-family="Inter">OVERHEAD — JET ARRAY ON TRANSOM</text>
-            <!-- Hull outline (overhead, transom at top) -->
-            <path d="M30 55 C50 45, 80 40, 110 40 C140 40, 170 45, 190 55 L190 65 L30 65 Z" fill="rgba(0,242,254,0.06)" stroke="rgba(0,242,254,0.15)" stroke-width="1"/>
-            <!-- 7 jets horizontal line -->
-            <circle cx="48" cy="60" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
-            <circle cx="68" cy="60" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
-            <circle cx="88" cy="60" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
-            <circle cx="108" cy="60" r="5" fill="rgba(255,184,0,0.4)" stroke="#FFB800" stroke-width="1"/>
-            <circle cx="128" cy="60" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
-            <circle cx="148" cy="60" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
-            <circle cx="168" cy="60" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+          <!-- Overhead mini-diagram: simulator rotated 90° — bow left, 7 jets vertical on transom -->
+          <g transform="translate(580, 225) scale(0.7)">
+            <rect x="0" y="0" width="240" height="80" rx="10" fill="rgba(0,242,254,0.04)" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+            <text x="120" y="18" text-anchor="middle" fill="rgba(148,163,184,0.6)" font-size="10" font-weight="600" font-family="Inter">OVERHEAD — SIMULATOR VIEW (ROTATED)</text>
+            <!-- Hull outline — bow left, transom right -->
+            <path d="M20 45 L120 30 L180 30 L220 45 L220 65 L180 80 L120 80 Z" fill="rgba(0,242,254,0.06)" stroke="rgba(0,242,254,0.15)" stroke-width="1"/>
+            <!-- 7 jets vertical line at transom (right side) -->
+            <circle cx="218" cy="48" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+            <circle cx="218" cy="54" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+            <circle cx="218" cy="60" r="5" fill="rgba(255,184,0,0.4)" stroke="#FFB800" stroke-width="1"/>
+            <circle cx="218" cy="66" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+            <circle cx="218" cy="72" r="5" fill="rgba(0,242,254,0.3)" stroke="#00f2fe" stroke-width="1"/>
+            <!-- Labels -->
+            <text x="20" y="55" fill="rgba(148,163,184,0.4)" font-size="8" font-family="Inter">Bow</text>
+            <text x="220" y="42" fill="#00f2fe" font-size="7" font-weight="600" font-family="Inter" text-anchor="end">7 Jets</text>
           </g>
 
           <!-- Advantages list -->
