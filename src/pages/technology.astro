@@ -90,7 +90,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="card principle-card">
           <div class="principle-number">01</div>
           <h3>Node Synchronization</h3>
-          <p>A synchronized array of 7 high-pressure thrust nodes is embedded at the transom line. Each node operates independently, controlled by a real-time digital loop running at <strong>2,000Hz</strong> — 40× faster than the industry standard.</p>
+          <p>A synchronized array of 7 high-pressure thrust nodes is embedded at the transom line. Each node operates independently, controlled by a real-time digital loop running at <strong>2,000Hz</strong>.</p>
         </div>
 
         <div class="card principle-card">
@@ -120,23 +120,10 @@ import Layout from '../layouts/Layout.astro';
           <p class="physics-highlight">ABLTV doesn't fight the ocean. It pushes against the thin film of water already attached to its own hull.</p>
         </div>
 
-        <div class="glass-box physics-card">
-          <h3>The Efficiency Math</h3>
-          <div class="physics-metrics">
-            <div class="physics-metric">
-              <span class="physics-value">87%</span>
-              <span class="physics-label">Propulsive Efficiency</span>
-            </div>
-            <div class="physics-metric">
-              <span class="physics-value amber">0.00</span>
-              <span class="physics-label">Drag Coefficient (Cd)</span>
-            </div>
-            <div class="physics-metric">
-              <span class="physics-value">0.08</span>
-              <span class="physics-label strikethrough">Conventional Rudder Cd</span>
-            </div>
-          </div>
-          <p>Conventional rudders create drag proportional to rudder angle. At 10° of rudder, ~5% of propulsion power is lost just to steer. At 20°, that jumps to 15%+. ABLTV steering creates <strong>near-zero additional drag</strong> — steering becomes a software operation, not a mechanical penalty.</p>
+        <div class="glass-box physics-card physics-full">
+          <h3>The Physics of Boundary Layer Control</h3>
+          <p>Every vessel moving through water drags a thin film of water along its hull. By injecting precisely controlled jets into this boundary layer, ABLTV can alter the pressure distribution across the stern — inducing a turning moment without any mechanical rudder surface.</p>
+          <p style="margin-top: 1rem;">This is not a minor improvement on existing steering technology — it is a fundamentally different approach. Where a rudder creates drag to steer, ABLTV redirects energy already in the water column.</p>
         </div>
 
         <div class="glass-box physics-card physics-full">
@@ -147,165 +134,7 @@ import Layout from '../layouts/Layout.astro';
             <li><strong>Starboard-side jets (J5–J7)</strong> reduce thrust and vector aft-port — decelerating the boundary layer on the starboard side</li>
             <li><strong>Center jet (J4)</strong> splits the difference — adding or subtracting based on demanded turn rate</li>
           </ol>
-          <p>The result: a <strong>pressure differential</strong> across the stern that smoothly rotates the vessel. The <strong>28ms response time</strong> means that by the time a conventional hydraulic rudder actuator has started moving, an ABLTV vessel has already begun its turn.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Redundancy Architecture -->
-    <hr class="divider" />
-    <section class="content-section animate-in delay-3">
-      <h2 class="section-title">Redundancy Architecture</h2>
-      <p class="section-subtitle">Conventional marine propulsion has a single point of failure. ABLTV has none.</p>
-
-      <div class="redundancy-intro glass-box">
-        <div class="redundancy-stats">
-          <div class="redundancy-stat">
-            <span class="redundancy-stat-value">7-of-7</span>
-            <span class="redundancy-stat-label">Redundancy Factor</span>
-          </div>
-          <div class="redundancy-stat">
-            <span class="redundancy-stat-value amber">4</span>
-            <span class="redundancy-stat-label">Min Jets for Full Control</span>
-          </div>
-          <div class="redundancy-stat">
-            <span class="redundancy-stat-value">3×</span>
-            <span class="redundancy-stat-label">Sensor Redundancy</span>
-          </div>
-          <div class="redundancy-stat">
-            <span class="redundancy-stat-value amber">10k+ hr</span>
-            <span class="redundancy-stat-label">MTBF per Jet</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="redundancy-grid">
-        <div class="card">
-          <h3>1 Jet Fails (Any)</h3>
-          <p>No perceptible effect. Remaining 6 reallocate. Turn authority maintained. Speed loss &lt; 3%.</p>
-        </div>
-        <div class="card">
-          <h3>3 Non-Adjacent Fail</h3>
-          <p>No perceptible effect. Remaining 4 compensate effectively. Each surviving jet operates at higher duty cycle.</p>
-        </div>
-        <div class="card">
-          <h3>3 Adjacent Fail</h3>
-          <p>Reduced but functional. Remaining 4 redistribute asymmetrically. Turning radius increases ~40%. Still fully maneuverable.</p>
-        </div>
-        <div class="card">
-          <h3>Center Jet (J4) Fails</h3>
-          <p>No perceptible effect. J4 is oversized by 15% and redundant with adjacent pairs. J3+J5 can reproduce any J4 vector.</p>
-        </div>
-        <div class="card">
-          <h3>ECU Failure</h3>
-          <p>No loss of control. Triple-redundant ECUs in 2-of-3 voting configuration. Hot-swappable.</p>
-        </div>
-        <div class="card">
-          <h3>Power Failure</h3>
-          <p>Controlled shutdown. Loss of main bus triggers instant transition to backup battery — 30 minutes of maneuvering reserve.</p>
-        </div>
-      </div>
-
-      <div class="redundancy-principle glass-box">
-        <h3>The Jet Independence Principle</h3>
-        <p>Every jet is a self-contained unit with <strong>independent power supply</strong> (shared bus, fused per-jet), <strong>independent servo valves</strong> (no common hydraulic system), <strong>independent sensor suite</strong> (pressure + flow, per jet), <strong>independent control channel</strong> (CAN bus, per-jet addressing), and <strong>independent articulation motors</strong> (one per axis per jet). No two jets share any component that, if failed, would disable both.</p>
-      </div>
-    </section>
-
-    <!-- Technical Specs -->
-    <hr class="divider" />
-    <section class="content-section animate-in delay-4">
-      <h2 class="section-title">Technical Specifications</h2>
-      <p class="section-subtitle">Engineering details of the ABLTV system — every number from real in-water testing.</p>
-
-      <div class="specs-comprehensive">
-        <div class="spec-item">
-          <span class="spec-key">Control Loop</span>
-          <span class="spec-value">2,000 Hz real-time</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Thrust Nodes</span>
-          <span class="spec-value">7 independent</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Jet Configuration</span>
-          <span class="spec-value">Linear array</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Jet Spacing</span>
-          <span class="spec-value">320 mm</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Nozzle Diameter</span>
-          <span class="spec-value">75 mm</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Max Thrust per Jet</span>
-          <span class="spec-value">2.4 kN</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Total Thrust</span>
-          <span class="spec-value">16.8 kN</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Vector Angle</span>
-          <span class="spec-value">±35° (azimuth)</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Response Time</span>
-          <span class="spec-value">28 ms</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Pump Flow Rate</span>
-          <span class="spec-value">200 L/s</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Pump Head</span>
-          <span class="spec-value">30 m</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Pump Efficiency</span>
-          <span class="spec-value">95%</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Propulsive Efficiency</span>
-          <span class="spec-value">87%</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Moving Parts (underwater)</span>
-          <span class="spec-value">Zero</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Hull Integration</span>
-          <span class="spec-value">Transom flush array</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Steering Mechanism</span>
-          <span class="spec-value">Differential drag vectoring</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Controller</span>
-          <span class="spec-value">ARM Cortex-M7 400 MHz</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Sensor Fusion</span>
-          <span class="spec-value">Kalman filter, 500 μs cycle</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Manufacturing</span>
-          <span class="spec-value">3D-printable modular</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Propulsion Type</span>
-          <span class="spec-value">Electric jet array</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">IP Status</span>
-          <span class="spec-value">5 Patents Filed</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-key">Propulsive Efficiency vs Pod</span>
-          <span class="spec-value">+19 pts (87% vs 68%)</span>
+          <p>The result: a <strong>pressure differential</strong> across the stern that smoothly rotates the vessel — controlled entirely in software, with no mechanical linkages below the waterline.</p>
         </div>
       </div>
     </section>
@@ -333,90 +162,20 @@ import Layout from '../layouts/Layout.astro';
             <li>Zero mechanical appendages below waterline</li>
             <li>Boundary layer modulation eliminates drag surface</li>
             <li>No moving parts below water = near-zero underwater maintenance</li>
-            <li>Modular, 3D-printable architecture</li>
+            <li>Modular architecture</li>
             <li>Regional manufacturing hubs enabled</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Performance comparison table -->
-    <hr class="divider" />
-    <section class="content-section animate-in delay-4">
-      <h2 class="section-title">Performance Comparison</h2>
-      <p class="section-subtitle">ABLTV vs conventional marine propulsion across key metrics.</p>
-
-      <div class="comparison-table-wrapper">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Metric</th>
-              <th>Conventional</th>
-              <th>ABLTV</th>
-              <th>Advantage</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Propulsive Efficiency</td>
-              <td>68% (electric pod)</td>
-              <td class="cyan-cell"><strong>87%</strong></td>
-              <td class="amber-cell">+19 pts</td>
-            </tr>
-            <tr>
-              <td>Drag Coefficient</td>
-              <td>0.08 (with rudder)</td>
-              <td class="cyan-cell"><strong>0.00</strong></td>
-              <td class="amber-cell">-100%</td>
-            </tr>
-            <tr>
-              <td>Control Loop Rate</td>
-              <td>50 Hz</td>
-              <td class="cyan-cell"><strong>2,000 Hz</strong></td>
-              <td class="amber-cell">40× faster</td>
-            </tr>
-            <tr>
-              <td>Response Time</td>
-              <td>200–500 ms</td>
-              <td class="cyan-cell"><strong>28 ms</strong></td>
-              <td class="amber-cell">10× faster</td>
-            </tr>
-            <tr>
-              <td>Moving Parts in Water</td>
-              <td>Shaft + prop + rudder</td>
-              <td class="cyan-cell"><strong>None</strong></td>
-              <td class="amber-cell">Zero maintenance</td>
-            </tr>
-            <tr>
-              <td>Redundancy</td>
-              <td>Single motor</td>
-              <td class="cyan-cell"><strong>7-of-7</strong></td>
-              <td class="amber-cell">7× more reliable</td>
-            </tr>
-            <tr>
-              <td>Patents</td>
-              <td>—</td>
-              <td class="cyan-cell"><strong>5 granted</strong></td>
-              <td class="amber-cell">Moat</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Prototype CTA -->
+    <!-- Investor CTA -->
     <hr class="divider" />
     <section class="content-section animate-in delay-4">
       <div class="glass-box cta-box">
-        <div class="cta-icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="23 7 16 12 23 17 23 7"/>
-            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-          </svg>
-        </div>
-        <h3>Explore the ABLTV Deep Dive</h3>
-        <p>An interactive technical brief — cutaway vessel view, performance metrics, redundancy diagram, and full spec sheet. Experience the full ABLTV story in motion.</p>
-        <a href="/tech-prototype/" class="button button-primary">Launch Tech Deep Dive →</a>
+        <h3>Investor Information</h3>
+        <p>Fluidity Marine is raising a $5M Seed round. Learn more about the technology, team, and terms.</p>
+        <a href="/investors" class="button button-primary">View Investor Page →</a>
         <a href="/tools/simulator.html" class="button button-secondary" style="margin-left: 1rem;">Launch Simulator</a>
       </div>
     </section>
@@ -490,165 +249,6 @@ import Layout from '../layouts/Layout.astro';
 
   .physics-full { grid-column: 1 / -1; }
 
-  .physics-metrics {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .physics-metric { text-align: center; }
-
-  .physics-value {
-    display: block;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--cyan);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-
-  .physics-value.amber { color: var(--amber); }
-
-  .physics-value.strikethrough {
-    text-decoration: line-through;
-    opacity: 0.4;
-    font-size: 1.3rem;
-  }
-
-  .physics-label {
-    display: block;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-  }
-
-  .physics-steps {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1rem;
-  }
-
-  .physics-steps li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-size: 0.95rem;
-  }
-
-  .physics-steps li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.85rem;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--cyan);
-    opacity: 0.5;
-  }
-
-  .physics-steps li strong { color: var(--text); }
-
-  /* ─── Redundancy ─── */
-  .redundancy-intro {
-    margin-bottom: 2rem;
-    padding: 2rem;
-  }
-
-  .redundancy-stats {
-    display: flex;
-    justify-content: space-around;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .redundancy-stat { text-align: center; }
-
-  .redundancy-stat-value {
-    display: block;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--cyan);
-    line-height: 1;
-    margin-bottom: 0.3rem;
-  }
-
-  .redundancy-stat-value.amber { color: var(--amber); }
-
-  .redundancy-stat-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-  }
-
-  .redundancy-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .redundancy-grid .card { padding: 1.5rem; }
-
-  .redundancy-grid .card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .redundancy-grid .card p {
-    font-size: 0.85rem;
-  }
-
-  .redundancy-principle {
-    padding: 2rem;
-  }
-
-  .redundancy-principle h3 {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0 0 0.75rem;
-  }
-
-  .redundancy-principle p {
-    color: var(--text-muted);
-    line-height: 1.7;
-    font-size: 0.95rem;
-    margin: 0;
-  }
-
-  /* ─── Specs Grid ─── */
-  .specs-comprehensive {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .spec-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.85rem 1.25rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-  }
-
-  .spec-key {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  .spec-value {
-    font-size: 0.88rem;
-    color: var(--cyan);
-    font-weight: 700;
-  }
-
   /* ─── Comparison Grid ─── */
   .comparison-grid {
     display: grid;
@@ -712,60 +312,10 @@ import Layout from '../layouts/Layout.astro';
 
   .comparison-card strong { color: var(--text); }
 
-  /* ─── Comparison Table ─── */
-  .comparison-table-wrapper {
-    overflow-x: auto;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-  }
-
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-  }
-
-  .comparison-table th {
-    background: var(--surface-card);
-    padding: 1rem 1.25rem;
-    text-align: left;
-    font-weight: 700;
-    color: var(--text);
-    border-bottom: 1px solid var(--border);
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-  }
-
-  .comparison-table td {
-    padding: 0.9rem 1.25rem;
-    border-bottom: 1px solid var(--border-light);
-    color: var(--text-muted);
-  }
-
-  .comparison-table tr:last-child td { border-bottom: none; }
-
-  .comparison-table tr:hover { background: rgba(0, 240, 255, 0.02); }
-
-  .cyan-cell { color: var(--cyan) !important; }
-  .amber-cell { color: var(--amber) !important; font-weight: 700; }
-
   /* ─── CTA Box ─── */
   .cta-box {
     text-align: center;
     padding: 4rem;
-  }
-
-  .cta-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: rgba(0, 240, 255, 0.1);
-    color: var(--cyan);
-    margin-bottom: 1.5rem;
   }
 
   .cta-box h3 {
@@ -785,12 +335,8 @@ import Layout from '../layouts/Layout.astro';
   /* ─── Responsive ─── */
   @media (max-width: 768px) {
     .physics-grid { grid-template-columns: 1fr; }
-    .physics-metrics { flex-direction: column; gap: 1rem; }
     .comparison-grid { grid-template-columns: 1fr; }
-    .redundancy-grid { grid-template-columns: 1fr; }
-    .redundancy-stats { flex-direction: column; align-items: center; }
     .cta-box { padding: 2.5rem 1.5rem; }
     .cta-box .button-secondary { margin-left: 0 !important; margin-top: 1rem; }
-    .specs-comprehensive { grid-template-columns: 1fr; }
   }
 </style>
