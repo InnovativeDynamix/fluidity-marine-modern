@@ -21,8 +21,8 @@ import Layout from '../layouts/Layout.astro';
     <section class="diagram-section animate-in delay-1">
       <div class="diagram-container">
         <div class="hull-profile">
-          <!-- SVG: Two views — overhead (top) and rear 3/4 (bottom) showing jet array on transom -->
-          <svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="tech-diagram">
+          <!-- SVG: Two views — overhead (tops) and rear (bottom), both showing jets in horizontal line on transom -->
+          <svg viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg" class="tech-diagram">
             <!-- ════════════════════════════════════════ -->
             <!-- TOP SECTION: Overhead View             -->
             <!-- ════════════════════════════════════════ -->
@@ -31,90 +31,85 @@ import Layout from '../layouts/Layout.astro';
             <rect x="20" y="10" width="200" height="26" rx="13" fill="rgba(0,240,255,0.08)" stroke="rgba(0,240,255,0.15)" stroke-width="1"/>
             <text x="120" y="28" text-anchor="middle" fill="#00F0FF" font-size="11" font-weight="700" font-family="Inter" letter-spacing="0.06em">OVERHEAD VIEW</text>
 
-            <!-- Overhead hull: long pointed bow (left), flat transom (right) -->
-            <path d="M40 170 C120 155, 220 150, 340 150 C420 150, 500 155, 580 160 L620 170 L620 190 L580 200 C500 205, 420 210, 340 210 C220 210, 120 205, 40 190 Z" 
+            <!-- Overhead hull: bow pointing UP, transom at bottom -->
+            <path d="M340 50 L300 120 C280 160, 280 200, 300 230 L320 250 L480 250 L500 230 C520 200, 520 160, 500 120 Z" 
                   fill="url(#hullGrad)" stroke="rgba(0,240,255,0.25)" stroke-width="1.5"/>
             
-            <!-- 7 jets in a straight horizontal line across the transom -->
-            <circle cx="614" cy="170" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="614" y="173" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">1</text>
-            <circle cx="626" cy="175" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="626" y="178" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">2</text>
-            <circle cx="638" cy="178" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="638" y="181" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">3</text>
-            <circle cx="650" cy="180" r="8" fill="rgba(255,184,0,0.25)" stroke="#FFB800" stroke-width="1.5"/>
-            <text x="650" y="183" text-anchor="middle" fill="#FFB800" font-size="7" font-weight="700" font-family="Inter">4</text>
-            <circle cx="662" cy="178" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="662" y="181" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">5</text>
-            <circle cx="674" cy="175" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="674" y="178" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">6</text>
-            <circle cx="686" cy="170" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="686" y="173" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">7</text>
+            <!-- 7 jets in a straight horizontal line across the bottom (transom) -->
+            <circle cx="324" cy="248" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="324" y="251" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">1</text>
+            <circle cx="346" cy="248" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="346" y="251" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">2</text>
+            <circle cx="368" cy="248" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="368" y="251" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">3</text>
+            <circle cx="390" cy="248" r="8" fill="rgba(255,184,0,0.25)" stroke="#FFB800" stroke-width="1.5"/>
+            <text x="390" y="251" text-anchor="middle" fill="#FFB800" font-size="7" font-weight="700" font-family="Inter">4</text>
+            <circle cx="412" cy="248" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="412" y="251" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">5</text>
+            <circle cx="434" cy="248" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="434" y="251" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">6</text>
+            <circle cx="456" cy="248" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="456" y="251" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">7</text>
 
-            <!-- Jet streams -->
-            <path d="M695 170 C710 168, 725 166, 740 164" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.4" fill="none"/>
-            <path d="M695 178 C710 177, 725 175, 740 173" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.35" fill="none"/>
-            <path d="M695 180 C710 180, 725 179, 740 179" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round" opacity="0.4" fill="none"/>
-            <path d="M695 178 C710 178, 725 177, 740 176" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.25" fill="none"/>
+            <!-- Jet streams flowing downward from each node -->
+            <path d="M324 256 C324 270, 328 280, 332 290" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.4" fill="none"/>
+            <path d="M346 256 C346 272, 350 282, 354 292" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.35" fill="none"/>
+            <path d="M390 256 C390 275, 394 285, 398 295" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round" opacity="0.4" fill="none"/>
+            <path d="M434 256 C434 272, 438 282, 442 292" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.3" fill="none"/>
+            <path d="M456 256 C456 270, 460 280, 464 290" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.25" fill="none"/>
 
-            <!-- Bow label -->
-            <text x="40" y="175" fill="rgba(148,163,184,0.4)" font-size="10" font-family="Inter">Bow</text>
-
-            <!-- Transom label -->
-            <text x="650" y="205" fill="rgba(148,163,184,0.4)" font-size="10" font-family="Inter" text-anchor="middle">Transom — 7× Jet Array</text>
+            <!-- Labels -->
+            <text x="390" y="45" fill="rgba(148,163,184,0.4)" font-size="10" font-family="Inter" text-anchor="middle">Bow</text>
+            <text x="390" y="265" fill="rgba(148,163,184,0.4)" font-size="10" font-family="Inter" text-anchor="middle">Transom — 7× Jet Array</text>
 
             <!-- ════════════════════════════════════════ -->
-            <!-- BOTTOM SECTION: Rear 3/4 View          -->
+            <!-- BOTTOM SECTION: Rear View              -->
             <!-- ════════════════════════════════════════ -->
 
             <!-- Label -->
-            <rect x="20" y="240" width="240" height="26" rx="13" fill="rgba(0,240,255,0.08)" stroke="rgba(0,240,255,0.15)" stroke-width="1"/>
-            <text x="140" y="258" text-anchor="middle" fill="#00F0FF" font-size="11" font-weight="700" font-family="Inter" letter-spacing="0.06em">REAR 3/4 VIEW</text>
+            <rect x="20" y="300" width="200" height="26" rx="13" fill="rgba(0,240,255,0.08)" stroke="rgba(0,240,255,0.15)" stroke-width="1"/>
+            <text x="120" y="318" text-anchor="middle" fill="#00F0FF" font-size="11" font-weight="700" font-family="Inter" letter-spacing="0.06em">REAR VIEW</text>
 
-            <!-- Hull from rear 3/4 perspective: shows transom face and part of port/starboard sides -->
-            <!-- Transom face (vertical plane) -->
-            <path d="M340 270 L340 390 L460 390 L460 270 Z" fill="rgba(15,23,42,0.8)" stroke="rgba(0,240,255,0.2)" stroke-width="1"/>
+            <!-- Transom face (rectangle viewed straight on) -->
+            <rect x="280" y="335" width="220" height="70" rx="4" fill="rgba(15,23,42,0.8)" stroke="rgba(0,240,255,0.2)" stroke-width="1.5"/>
             
-            <!-- Port side receding -->
-            <path d="M340 270 L280 300 L280 370 L340 390" fill="rgba(10,18,30,0.6)" stroke="rgba(0,240,255,0.12)" stroke-width="1"/>
-            
-            <!-- Starboard side receding -->
-            <path d="M460 270 L520 300 L520 370 L460 390" fill="rgba(10,18,30,0.6)" stroke="rgba(0,240,255,0.12)" stroke-width="1"/>
+            <!-- Hull sides receding -->
+            <path d="M280 335 L240 345 L240 390 L280 405" fill="rgba(10,18,30,0.5)" stroke="rgba(0,240,255,0.1)" stroke-width="1"/>
+            <path d="M500 335 L540 345 L540 390 L500 405" fill="rgba(10,18,30,0.5)" stroke="rgba(0,240,255,0.1)" stroke-width="1"/>
 
-            <!-- Deck surface -->
-            <path d="M340 270 L280 300 L520 300 L460 270 Z" fill="rgba(20,35,55,0.5)" stroke="rgba(0,240,255,0.1)" stroke-width="1"/>
+            <!-- Deck line (top edge) -->
+            <line x1="280" y1="335" x2="500" y2="335" stroke="rgba(0,240,255,0.15)" stroke-width="1.5"/>
 
-            <!-- 7 Jets in straight vertical line down center of transom face -->
-            <circle cx="400" cy="278" r="9" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="400" y="282" text-anchor="middle" fill="#00F0FF" font-size="8" font-weight="700" font-family="Inter">1</text>
-            <circle cx="400" cy="295" r="9" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="400" y="299" text-anchor="middle" fill="#00F0FF" font-size="8" font-weight="700" font-family="Inter">2</text>
-            <circle cx="400" cy="312" r="9" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="400" y="316" text-anchor="middle" fill="#00F0FF" font-size="8" font-weight="700" font-family="Inter">3</text>
-            <circle cx="400" cy="329" r="9" fill="rgba(255,184,0,0.25)" stroke="#FFB800" stroke-width="1.5"/>
-            <text x="400" y="333" text-anchor="middle" fill="#FFB800" font-size="8" font-weight="700" font-family="Inter">4</text>
-            <circle cx="400" cy="346" r="9" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="400" y="350" text-anchor="middle" fill="#00F0FF" font-size="8" font-weight="700" font-family="Inter">5</text>
-            <circle cx="400" cy="363" r="9" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="400" y="367" text-anchor="middle" fill="#00F0FF" font-size="8" font-weight="700" font-family="Inter">6</text>
-            <circle cx="400" cy="380" r="9" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
-            <text x="400" y="384" text-anchor="middle" fill="#00F0FF" font-size="8" font-weight="700" font-family="Inter">7</text>
+            <!-- Waterline indicator -->
+            <line x1="240" y1="365" x2="540" y2="365" stroke="rgba(0,240,255,0.12)" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="555" y="368" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Inter">Waterline</text>
 
-            <!-- Jet streams from rear view -->
-            <path d="M409 278 C425 274, 440 270, 455 266" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.35" fill="none"/>
-            <path d="M409 329 C425 327, 440 324, 455 321" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round" opacity="0.4" fill="none"/>
-            <path d="M409 380 C425 380, 440 379, 455 376" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.25" fill="none"/>
+            <!-- 7 Jets in horizontal line across transom at waterline -->
+            <circle cx="296" cy="365" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="296" y="368" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">1</text>
+            <circle cx="324" cy="365" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="324" y="368" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">2</text>
+            <circle cx="352" cy="365" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="352" y="368" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">3</text>
+            <circle cx="380" cy="365" r="8" fill="rgba(255,184,0,0.25)" stroke="#FFB800" stroke-width="1.5"/>
+            <text x="380" y="368" text-anchor="middle" fill="#FFB800" font-size="7" font-weight="700" font-family="Inter">4</text>
+            <circle cx="408" cy="365" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="408" y="368" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">5</text>
+            <circle cx="436" cy="365" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="436" y="368" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">6</text>
+            <circle cx="464" cy="365" r="8" fill="rgba(0,240,255,0.2)" stroke="#00F0FF" stroke-width="1.5"/>
+            <text x="464" y="368" text-anchor="middle" fill="#00F0FF" font-size="7" font-weight="700" font-family="Inter">7</text>
+
+            <!-- Jet streams flowing aft from rear view -->
+            <path d="M296 373 C296 385, 300 395, 304 405" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.35" fill="none"/>
+            <path d="M380 373 C380 388, 384 398, 388 408" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round" opacity="0.4" fill="none"/>
+            <path d="M464 373 C464 385, 468 395, 472 405" stroke="#00F0FF" stroke-width="1.2" stroke-linecap="round" opacity="0.25" fill="none"/>
 
             <!-- Labels -->
-            <text x="400" y="270" text-anchor="middle" fill="#00F0FF" font-size="10" font-weight="600" font-family="Inter">Deck</text>
-            <text x="400" y="395" text-anchor="middle" fill="rgba(148,163,184,0.5)" font-size="10" font-family="Inter">Transom — 7 Jets in Vertical Array</text>
-            <text x="280" y="340" text-anchor="middle" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Inter">Port</text>
-            <text x="520" y="340" text-anchor="middle" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Inter">Starboard</text>
-
-            <!-- Flow lines along hull -->
-            <path d="M100 195 C200 195, 350 193, 500 194" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
-            <path d="M100 205 C250 202, 400 200, 550 203" stroke="rgba(255,255,255,0.03)" stroke-width="1" fill="none"/>
-            <path d="M100 215 C300 212, 450 210, 600 213" stroke="rgba(255,255,255,0.02)" stroke-width="1" fill="none"/>
+            <text x="390" y="330" text-anchor="middle" fill="#00F0FF" font-size="10" font-weight="600" font-family="Inter">Deck</text>
+            <text x="280" y="415" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Inter">Port</text>
+            <text x="500" y="415" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Inter" text-anchor="end">Starboard</text>
+            <text x="390" y="420" text-anchor="middle" fill="rgba(148,163,184,0.5)" font-size="10" font-family="Inter">7 Jets in Horizontal Array at Waterline</text>
 
             <defs>
               <linearGradient id="hullGrad" x1="0" y1="0" x2="1" y2="0">
